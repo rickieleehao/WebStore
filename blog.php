@@ -11,16 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./styles/blog.css">
+    <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
     <title>Blog 1</title>
 </head>
 
 <body>
     <?php include "./component/header.php"; ?>
     <?php include "./component/navigator.php"; ?>
+    <div class="blog-content">
+        <div class="blog-text">
+            <h1>Choosing the right shoes</h1>
+            <h2>And Why It Matters</h2>
+        </div>
+        <div class="blog-crop">
+            <img src="./img/blog/comfortable-shoes-foot-care.jpg" alt="Image of footwear">
+        </div>
+        <div class="blog-text">
+            <!-- Maybe need to make them clickable later-->
+            <div class="author">By Koh Jun Dong | Published 12 June 2020</div>
+            <div class="category">Category: Footwear</div>
+        </div>
+    </div>
 
-    <h1>
-
-        <?php include "./component/footer.php"; ?>
+    <?php include "./component/footer.php"; ?>
 </body>
 
 </html>
