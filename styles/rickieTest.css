@@ -99,3 +99,22 @@ span {
     padding-top: 8px;
     margin-left: 20px;
 }
+
+/* footer */
+.footerWrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    width: 100%;
+    background-color: var(--black);
+    color: white;
+}
+
+.footer{
+    padding: var(--spacing);
+    font-size: var(--smaller);
+    padding-top: 10px;
+
+}
