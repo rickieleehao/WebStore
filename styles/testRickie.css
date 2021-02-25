@@ -1,0 +1,119 @@
+:root {
+    --smaller: 14px;
+    --small: 16px;
+    --medium: 18px;
+    --large: 20px;
+    /* color */
+    --yellow: #FEF093;
+    --black: #27231F;
+    --grey: #E2E2E2;
+    /* side spacing in px */
+    --spacing: 0 38px 0 36px; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+
+/* common settings*/
+nav,
+.topheader,
+.header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+div {
+    display: block;
+}
+
+li,
+a {
+    text-decoration: none;
+    color: var(--black);
+    list-style: none;
+}
+
+/* topheader */
+.topheader {
+    height: 5vh;
+    width: 100%;
+    background-color: var(--grey);
+    font-size: var(--smaller);
+}
+
+.topheader ul {
+    float: right;
+    padding: 10px 8px 0 0;
+}
+
+.topheader li,
+span {
+    display: inline;
+    padding-right: 8px;
+}
+
+/* wrapper for the header nav */
+.header {
+    padding: 10px 38px 10px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+    width: 60px;
+}
+
+#cart {
+    height: 40px;
+    width: 40px;
+}
+
+.header li{
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+
+/* btmheader nav = navigator */
+#navLogo{
+    height: 20px;
+    width: 20px;
+}
+
+.btmheader {
+    height: 5vh;
+    width: 100%;
+    background-color: var(--yellow);
+}
+
+.navSide   {
+    padding: var(--spacing);
+    padding-top: 8px;
+    margin-left: 20px;
+}
+
+/* footer */
+.footerWrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    width: 100%;
+    background-color: var(--black);
+    color: white;
+}
+
+.footer{
+    padding: var(--spacing);
+    font-size: var(--smaller);
+    padding-top: 10px;
+}

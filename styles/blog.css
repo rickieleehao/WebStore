@@ -1,0 +1,55 @@
+.blog-content {
+    width: 57.5rem;
+    max-width: 100%;
+    padding: 1rem 1rem;
+    margin: auto;
+}
+
+.blog-text {
+    padding: 0 0.5rem;
+}
+
+.blog-crop {
+    display: block;
+    width: 57.5rem;
+    max-width: 100%;
+    height: fit-content;
+    margin: 1rem 0 0.5rem;
+    overflow: hidden;
+}
+
+.blog-crop img {
+    width: 57.5rem;
+    max-width: 100%; 
+    margin: -15% 0 0 0;
+}
+
+.author {
+    font-size: 1.125rem;
+    color: #757575;
+}
+
+.category {
+    font-size: 1.125rem;
+    color: #757575;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: #757575;
+}
+
+@media only screen and (min-width: 600px){
+    .author {
+        float: left;
+    }
+
+    .category {
+        display: inline;
+        float: right;
+    }
+}
