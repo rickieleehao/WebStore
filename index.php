@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="./styles/rickieTest.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <title>FootWear</title>
 </head>
 
 <body>
-    <?php include"./component/header.php";?>
-    <?php include"./component/navigator.php";?>
-    <?php include"./component/footer.php";?>
+    <?php include "./component/header.php"; ?>
+    <?php include "./component/navigator.php"; ?>
+    <?php include "./component/footer.php"; ?>
 </body>
 
 </html>
