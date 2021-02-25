@@ -1,3 +1,3 @@
 <div class="navBar">
-    <img src="../img/nav_icon.png" alt="">
+    <img src="./img/nav_icon.png" alt="">
 </div>
