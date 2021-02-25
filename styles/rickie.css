@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Newsreader', serif;
+
 }
 
 /* common settings*/
@@ -42,7 +43,8 @@ a {
 
 /* topheader */
 .topheader {
-    height: 5vh;
+    /* try to use em, px, rem */
+    height: 5vh; 
     width: 100%;
     background-color: var(--grey);
     font-size: var(--smaller);
@@ -61,7 +63,7 @@ span {
 
 /* wrapper for the header nav */
 .header {
-    padding: 10px 38px 10px 36px;
+    padding: var(--spacing);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,4 +100,42 @@ span {
     padding: var(--spacing);
     padding-top: 8px;
     margin-left: 20px;
+}
+
+/* footer */
+.footerWrapper{
+    /* problem occur while scrolling */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    width: 100%;
+    background-color: var(--black);
+    color: white;
+}
+
+.footer{
+    padding: var(--spacing);
+    font-size: var(--smaller);
+    padding-top: 10px;
+}
+
+/* sideSide navContainer */
+.navSide ul li.dropDown ul{
+    background-color: var(--yellow);
+    position: absolute;
+    left: 0;
+    padding-left: 0;
+    min-width: 100px;
+    display: none;
+}
+
+.navSide ul li.dropDown ul li a{
+    color: yellow;
+    width: 100px;
+}
+
+.navSide ul li.dropDown:hover ul{
+    display: block;
 }
