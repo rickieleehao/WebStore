@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Sign in</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
 <h2>Sign in to your account</h2>
