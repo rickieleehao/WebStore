@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Sign in</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
 <h2>Sign in to your account</h2>
@@ -12,7 +12,7 @@
   <form class="modal-content animate" action="/success.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="test.jpg" alt="Avatar" class="avatar" style="width:150px;height:150px;">
+      <img src="./img/web_icon3.png" alt="Avatar" class="avatar" style="width:150px;height:150px;">
     </div>
 
     <div class="container">
