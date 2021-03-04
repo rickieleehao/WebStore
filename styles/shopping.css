@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+	background: #f7f8fc;
+	color: #555555;
+}
+
+.button_grp{
+	width: 15%;
+	padding: 20px;
+	position: absolute;
+	overflow-y: auto;
+	float:left;
+}
+
+.button_grp ul{
+	display: inline-block;
+}
+
+.button_grp ul li{
+	background: rgb(255, 255, 255);
+	margin: 10px;
+	padding: 10px 15px;
+	min-width: 80px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-radius: 15px;
+	box-shadow: 0px 0.5px 5px rgba(0,0,0,0.125);
+}
+
+.button_grp ul label{
+	position:relative;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:rgb(0, 0, 0);
+}
+
+.button_grp ul li.active,
+.button_grp ul li:hover{
+	background-color: yellow;
+	box-shadow: 0px 2px 5px #666;
+	transform: translateY(4px);
+}
+
+.container{
+	position:relative;
+	margin-bottom:25px;
+	float:right;;
+	display:flex;
+	margin: 0 1.5%;
+  	width: 90%;
+	padding:50px;
+	justify-content: center;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	text-align: center;
+	margin:auto;
+}
+  
+.price {
+	color: grey;
+	font-size: 22px;
+}
+
+.card[type="img"]{
+	width :100%;
+}
+  
+.card button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+  
+.card button:hover {
+	opacity: 0.7;
+}
+
