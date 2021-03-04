@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/testRickie.css">
+    <link rel="stylesheet" href="./styles/components.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
@@ -57,33 +57,35 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <?php include "./component/footer.php"; ?>
 
-        <?php include "./component/footer.php"; ?>
 
-        <!-- to be separated to its own parts? -->
-        <script type="text/javascript">
-            function toggleSources() {
-                var sourcebutton = document.getElementById("source-click");
-                var sources = document.getElementsByClassName("sources");
-                var number = sources.length;
 
-                if (sourcebutton.innerHTML === "+ Sources") {
-                    sourcebutton.innerHTML = "- Sources";
-                    for (i = 0; i < number; i++) {
-                        sources[i].classList.add('animateShow');
-                        sources[i].classList.remove('animateHidden');
-                    }
-                } else {
-                    sourcebutton.innerHTML = "+ Sources";
-                    for (i = 0; i < number; i++) {
-                        sources[i].classList.add('animateHidden');
-                        sources[i].classList.remove('animateShow');
-                    }
+    <!-- to be separated to its own parts? -->
+    <script type="text/javascript">
+        function toggleSources() {
+            var sourcebutton = document.getElementById("source-click");
+            var sources = document.getElementsByClassName("sources");
+            var number = sources.length;
+
+            if (sourcebutton.innerHTML === "+ Sources") {
+                sourcebutton.innerHTML = "- Sources";
+                for (i = 0; i < number; i++) {
+                    sources[i].classList.add('animateShow');
+                    sources[i].classList.remove('animateHidden');
                 }
-
-
+            } else {
+                sourcebutton.innerHTML = "+ Sources";
+                for (i = 0; i < number; i++) {
+                    sources[i].classList.add('animateHidden');
+                    sources[i].classList.remove('animateShow');
+                }
             }
-        </script>
+
+
+        }
+    </script>
 </body>
 
 </html>
