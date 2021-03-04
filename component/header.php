@@ -1,8 +1,8 @@
 <div class="topheader">
     <ul>
-        <li><a href="#">Join Us</a></li>
+        <li ><a href="#">Join Us</a></li>
         <span>|</span>
-        <li><a href="#">Sign In</a></li>
+        <li ><a href="#">Sign In</a></li>
     </ul>
 </div>
 <div class="headerWrapper">

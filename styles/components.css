@@ -8,7 +8,7 @@
     --black: #27231F;
     --grey: #E2E2E2;
     /* side spacing in px */
-    --spacing: 0 38px 0 36px; 
+    --spacing: 0 38px 0 36px;
 }
 
 * {
@@ -20,6 +20,16 @@
 }
 
 /* common settings*/
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 700px;
+    min-height: 100%;
+}
+
 nav,
 .topheader,
 .header {
@@ -34,8 +44,12 @@ div {
     display: block;
 }
 
-li,
-a {
+.topheader li,
+.topheader a,
+.headerWrapper li,
+.headerWrapper a,
+.navSide li,
+.navSide a {
     text-decoration: none;
     color: var(--black);
     list-style: none;
@@ -44,7 +58,7 @@ a {
 /* topheader */
 .topheader {
     /* try to use em, px, rem */
-    height: 5vh; 
+    height: 5vh;
     width: 100%;
     background-color: var(--grey);
     font-size: var(--smaller);
@@ -64,6 +78,8 @@ span {
 /* wrapper for the header nav */
 .header {
     padding: var(--spacing);
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,13 +95,13 @@ span {
     width: 40px;
 }
 
-.header li{
+.header li {
     display: inline;
     padding: 0 10px 0 10px;
 }
 
 /* btmheader nav = navigator */
-#navLogo{
+#navLogo {
     height: 20px;
     width: 20px;
 }
@@ -96,33 +112,34 @@ span {
     background-color: var(--yellow);
 }
 
-.navSide   {
+.navSide {
     padding: var(--spacing);
     padding-top: 8px;
     margin-left: 20px;
 }
 
 /* footer */
-.footerWrapper{
+.footerWrapper {
     /* problem occur while scrolling */
-    position: absolute;
-    bottom: 0;
+    /* position: sticky; */
+    /* bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
+    margin-top: auto;
     height: 30px;
     width: 100%;
     background-color: var(--black);
     color: white;
 }
 
-.footer{
+.footer {
     padding: var(--spacing);
     font-size: var(--smaller);
     padding-top: 10px;
 }
 
 /* sideSide navContainer */
-.navSide ul li.dropDown ul{
+.navSide ul li.dropDown ul {
     background-color: var(--yellow);
     position: absolute;
     left: 0;
@@ -131,11 +148,11 @@ span {
     display: none;
 }
 
-.navSide ul li.dropDown ul li a{
+.navSide ul li.dropDown ul li a {
     color: yellow;
     width: 100px;
 }
 
-.navSide ul li.dropDown:hover ul{
+.navSide ul li.dropDown:hover ul {
     display: block;
 }
