@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <head>
     <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/register.css">
 </head>
 <body>
 <h2>Become a member</h2>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button>
-<div id="id02" class="modal">
-  <form class="modal-content animate" action="/congrat.php" method="post">
+<?php include "./component/footer.php"; ?>
+<div id="ID">
+  <form class="register-content animate" action="/congrat.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="test.jpg" alt="Avatar" class="avatar" style="width:150px;height:150px;">
+      <img src="./img/web_icon3.png" alt="Avatar" class="avatar" style="width:150px;height:150px;">
     </div>
 
     <div class="container">
-        <label for="uemail"><b>Email</b></label>
-        <br><input type="email" placeholder="Enter Email" name="uemail" required>
-
-        <br><label for="uname"><b>Name</b></label>
-        <input type="text" placeholder="Enter Name" name="uname" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <button type="submit">Register</button>
+        <label>Email</label>
+        <input type="email" required>
     </div>
+    <div class="container">
+        <label>Name</label>
+        <input type="text" required>
+    </div>
+    <div class="container">
+        <label>Password</label>
+        <input type="password" required>
+    </div>
+    <div class="dropdown">
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+
+    <button type="submit">Register</button>
   </form>
 </div>
 </body>
