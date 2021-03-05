@@ -2,7 +2,7 @@
 <head>
     <title>Sign in</title>
     <link rel="stylesheet" href="./styles/login.css">
-    <link rel="stylesheet" href="./styles/rickie.css">
+    <link rel="stylesheet" href="./styles/components.css">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
 </head>
 <body>
@@ -20,12 +20,12 @@
     </div>
 
     <div class="container">
-        <label>Email</label>
         <input type="email" required>
+        <label>Email</label>  
     </div>
     <div class="container">
-        <label>Password</label>
         <input type="password" required>
+        <label>Password</label>
         <a href="javascript:alert('Contact Customer Service for Password Reset');">Forgot password</a>
     </div>
       <button type="submit" class="btn">Login</button>

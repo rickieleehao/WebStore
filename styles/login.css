@@ -20,18 +20,16 @@
 
 .container input {
     border:0;
-    border-bottom:1px solid #555;  
-    background:transparent;
+    border-bottom:1px solid rgb(0, 0, 0);  
     width:100%;
     padding:8px 0 5px 0;
     font-size:16px;
     color:rgb(0, 0, 0);
 }
 
-.container input:focus{ 
-    border:none;	
+.container input:focus{ 	
     outline:none;
-    border-bottom:1px solid yellow;	
+    border-style:solid;	
 }
   
 /* Set a style for all buttons */

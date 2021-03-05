@@ -3,7 +3,7 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="./styles/shopping.css">
-    <link rel="stylesheet" href="./styles/rickie.css">
+    <link rel="stylesheet" href="./styles/components.css">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
 </head>
 </head>
