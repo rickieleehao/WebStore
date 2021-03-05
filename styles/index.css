@@ -1,4 +1,3 @@
-
 /* common settings */
 .mainAd li,
 .mainAd a,
@@ -7,6 +6,10 @@
     text-decoration: none;
     color: var(--black);
     list-style: none;
+}
+
+body {
+    --mainAd-load-time: 1s;
 }
 
 /* mainAd */
@@ -29,6 +32,7 @@
 
 .mainAd .mainAd_imgWrapper {
     position: relative;
+    animation: landing var(--mainAd-load-time) ease-out;
 }
 
 .mainAd .mainAd_img {
@@ -39,6 +43,19 @@
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+@keyframes landing {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .mainAd .mainAd_imgWrapper a {
@@ -92,10 +109,10 @@
     transition: ease-in 0.2s;
 }
 
- .carousel .card:hover {
+.carousel .card:hover {
     /* box-shadow: 5px 5px 5px var(--yellow,0.1); */
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    transform: translate(-5px,-5px);
+    transform: translate(-5px, -5px);
     transition: ease-in 0.2s;
 }
 

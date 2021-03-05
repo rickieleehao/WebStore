@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-
 }
 
 /* common settings*/
@@ -58,21 +57,26 @@ div {
 /* topheader */
 .topheader {
     /* try to use em, px, rem */
-    height: 5vh;
+    height: 35px;
     width: 100%;
     background-color: var(--grey);
     font-size: var(--smaller);
+    position: relative;
 }
 
 .topheader ul {
-    float: right;
-    padding: 10px 8px 0 0;
+    position: absolute;
+    padding-right: 20px;
+    top: 50%;
+    right: 0%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .topheader li,
 span {
     display: inline;
-    padding-right: 8px;
+    padding-right: 4px;
 }
 
 /* wrapper for the header nav */
@@ -107,7 +111,7 @@ span {
 }
 
 .btmheader {
-    height: 5vh;
+    height: 35px;
     width: 100%;
     background-color: var(--yellow);
 }

@@ -30,25 +30,27 @@
         <div class="itemDets">
             <div>
                 <!-- js for text -->
-                <h2 class="Category">Men's Shoe</h2>
-                <h1 class="Name">Nike Air Max 3</h1>
-                <h3>Select Size</h3>
-                <div class="size">
-                    <button>US 7</button>
-                    <button>US 8</button>
-                    <button>US 9</button>
-                    <button>US 10</button>
-                    <button>US 11</button>
-                    <button>US 12</button>
+                <p class="category">Men's Shoe</p>
+                <p class="name">Nike Air Max 3</p>
+                <p class= "size">Select Size</p>
+                <div class="sizeOption">
+                    <div>
+                        <button>US 7</button>
+                        <button>US 8</button>
+                        <button>US 9</button>
+                        <button>US 10</button>
+                        <button>US 11</button>
+                        <button>US 12</button>
+                    </div>
                 </div>
                 <div class="addCart">
                     <button>Add to Card</button>
                 </div>
-                <h3 class="itemDesc">Nothing as fly, nothing as comfortable, nothing as proven—the Nike Air Max 3 stays
+                <p class="itemDesc">Nothing as fly, nothing as comfortable, nothing as proven—the Nike Air Max 3 stays
                     true to its roots with the iconic Waffle outsole, stitched overlays and classic TPU accents. Fresh
-                    colours give a modern look while Max Air cushioning adds comfort to your journey.</h3>
+                    colours give a modern look while Max Air cushioning adds comfort to your journey.</p>
 
-                <h3 class="itemColors">- Colour Shown: White/Spruce/Grey/Fog/HotLine</h3>
+                <p class="itemColors">- Colour Shown: White/Spruce/Grey/Fog/HotLine</p>
 
             </div>
         </div>

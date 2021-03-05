@@ -1,6 +1,97 @@
+:root {
+    --smaller: 14px;
+    --small: 16px;
+    --medium: 20px;
+    --large: 24px;
+    /* color */
+    --yellow: #FEF093;
+    --black: #27231F;
+    --grey: #E2E2E2;
+    /* side spacing in px */
+    --spacing: 0 38px 0 36px;
+}
 
 /* itemWrapper */
+.itemWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing);
+    padding-top: 30px;
+
+}
+
+.itemImg {
+    /* padding: 0 20px 0 20px; */
+    flex: 3;
+}
+
+.itemImg div {
+    text-align: center;
+}
+
+.itemDets {
+    flex: 2;
+}
+
 .itemImg .Img {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 400px;
+    margin: 5px;
+}
+
+/* itemDets */
+.itemDets {
+    padding-top: 20px;
+}
+
+.itemDets .category {
+    font-size: var(--medium);
+    margin-bottom: 15px;
+}
+
+.itemDets .name {
+    margin-bottom: 30px;
+    font-size: var(--large);
+    font-weight: bold;
+}
+
+.itemDets .size {
+    margin-bottom: 15px;
+    font-size: var(--small);
+}
+
+.itemDets .sizeOption {
+    /* display: flex;
+    justify-content: space-between;*/
+    text-align: center;
+    width: 80%;
+    /* height: 120px; */
+    height: auto;
+}
+
+.itemDets .sizeOption button {
+    margin: 2px;
+    width: 120px;
+    min-height: 50px;
+    border-radius: 3px;
+    border-width: 0px;
+}
+
+.itemDets .addCart {
+    /* display: inline; */
+    text-align: center;
+    width: 80%;
+}
+
+.itemDets .addCart button {
+    height: 50px;
+    margin: 10px;
+    width: 70%;
+    color: white;
+    background-color: var(--black);
+    border-radius: 30px;
+}
+
+.itemDets :is(.itemDecs, .itemColors) {
+    font-size: var(--small);
 }
