@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
     $checkemail = "SELECT email FROM member WHERE email='$email'";
     $result = $sql->query($checkemail);
 
-    if (strcmp($_POST['password'], $_POST['retype-password']) !== 0) {
+    if (!password_verify($_POST['retype-password'], $password)) {
         echo '<script>alert("Password typed is not the same")</script>';
     } else if ($result->num_rows == 1) {
         echo '<script>alert("Email has been registered before!")</script>';
