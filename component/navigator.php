@@ -11,11 +11,11 @@
                 <li class="dropDown">
                     <img id="navLogo" src="./img/nav_icon.png" alt="navLogo">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">Shop</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </li>

@@ -112,6 +112,15 @@ img.avatar {
     border: 1px solid #888;
     width: 30%; /* Could be more or less, depending on screen size */
 }
+
+.fail{
+    Font-size: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-60%, -40%);
+}
   
 /* The Close Button */
 .close {
