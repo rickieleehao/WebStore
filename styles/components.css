@@ -1,8 +1,8 @@
 :root {
     --smaller: 14px;
     --small: 16px;
-    --medium: 18px;
-    --large: 20px;
+    --medium: 20px;
+    --large: 24px;
     /* color */
     --yellow: #FEF093;
     --black: #27231F;
@@ -140,6 +140,12 @@ span {
     padding: var(--spacing);
     font-size: var(--smaller);
     padding-top: 10px;
+    position: relative;
+}
+
+.footer p{
+    position: absolute;
+    top: 50%;
 }
 
 /* sideSide navContainer */

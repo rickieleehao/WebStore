@@ -13,6 +13,19 @@
     <title>FootWear</title>
 </head>
 
+<?php
+$conn = mysqli_connect('localhost','root','','data');
+$query = "SELECT * FROM shoes_data ORDER BY RAND() LIMIT 4";
+$i = 0;
+if ($result = mysqli_query($conn,$query));{
+    while($obj = mysqli_fetch_object($result)){
+        $shoes[$i] = $obj;
+        $i++;
+    }
+}
+mysqli_close($conn);
+?>
+
 <body>
     <?php include "./component/header.php"; ?>
     <?php include "./component/navigator.php"; ?>
@@ -36,49 +49,47 @@
         <div class="carouselWrapper">
             <div class="carousel">
                 <!-- .js for img -->
-                <a href="#"><img class="card card-1" src="./img/Shoes/men_1_1.jpg">
+                <a href="itemPage.php?shoes=<?php echo $shoes[0]->id?>"><img class="card card-1" src="./img/Shoes/<?php echo $shoes[0]->id?>_1.jpg">
                     <div class="cardDesc">
                         <div>
-                            <h4>Shoes Name 1</h4>
-                            <p>Shoes Desc</p>
+                            <h4><?php echo $shoes[0]->name?></h4>
+                            <p><?php echo $shoes[0]->sub_category?></p>
                         </div>
-                        <p class="cardPrice">22</p>
+                        <p class="cardPrice">RM <?php echo $shoes[0]->price?></p>
                     </div>
                 </a>
-                <a href="#"><img class="card card-2" src="./img/Shoes/men_1_1.jpg">
+                <a href="itemPage.php?shoes=<?php echo $shoes[1]->id?>"><img class="card card-2" src="./img/Shoes/<?php echo $shoes[1]->id?>_1.jpg">
                     <div class="cardDesc">
                         <div>
-                            <h4>Shoes Name 1</h4>
-                            <p>Shoes Desc</p>
+                            <h4><?php echo $shoes[1]->name?></h4>
+                            <p><?php echo $shoes[1]->sub_category?></p>
                         </div>
-                        <span>2</span>
+                        <p class="cardPrice">RM <?php echo $shoes[1]->price?></p>
                     </div>
                 </a>
-                <a href="#"><img class="card card-3" src="./img/Shoes/men_1_1.jpg">
+                <a href="itemPage.php?shoes=<?php echo $shoes[2]->id?>"><img class="card card-3" src="./img/Shoes/<?php echo $shoes[2]->id?>_1.jpg">
                     <div class="cardDesc">
                         <div>
-                            <h4>Shoes Name 1</h4>
-                            <p>Shoes Desc</p>
+                            <h4><?php echo $shoes[2]->name?><</h4>
+                            <p><?php echo $shoes[2]->sub_category?></p>
                         </div>
-                        <span>2</span>
+                        <p class="cardPrice">RM <?php echo $shoes[2]->price?></p>
                     </div>
                 </a>
-                <a href="#"><img class="card card-4" src="./img/Shoes/men_1_1.jpg">
+                <a href="itemPage.php?shoes=<?php echo $shoes[3]->id?>"><img class="card card-4" src="./img/Shoes/<?php echo $shoes[3]->id?>_1.jpg">
                     <div class="cardDesc">
                         <div>
-                            <h4>Shoes Name 1</h4>
-                            <p>Shoes Desc</p>
+                            <h4><?php echo $shoes[3]->name?></h4>
+                            <p><?php echo $shoes[3]->sub_category?></p>
                         </div>
-                        <span>2</span>
+                        <p class="cardPrice"><?php echo $shoes[3]->price?></p>
                     </div>
                 </a>
             </div>
         </div>
     </div>
-
-
-
     <?php include "./component/footer.php"; ?>
+    <script src="index.js"></script>
 </body>
 
 </html>

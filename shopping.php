@@ -14,7 +14,7 @@
         <div>
         <ul>
             <label>Gender</lable>
-		    <li class="btn active">All</li>
+		    <li class="btn" class = >All</li>
             <li class="btn">Woman</li>
 		    <li class="btn">Man</li>
     

@@ -18,8 +18,8 @@ body {
     padding-bottom: 10px;
 }
 
-.mainAd .category-gender,
-.mainAd .category-gender-end {
+.category-gender,
+.category-gender-end {
     width: 10%;
 }
 
@@ -30,14 +30,14 @@ body {
     justify-content: space-between;
 }
 
-.mainAd .mainAd_imgWrapper {
+.mainAd_imgWrapper {
     position: relative;
     animation: landing var(--mainAd-load-time) ease-out;
 }
 
-.mainAd .mainAd_img {
+.mainAd_img {
     width: 100%;
-    height: 300px;
+    height: 450px;
     background-image: url(../img/Shopping_Page_Men2.png);
     background-size: 100%;
     background-position: center;
@@ -58,7 +58,7 @@ body {
     }
 }
 
-.mainAd .mainAd_imgWrapper a {
+.mainAd_imgWrapper a {
     position: absolute;
     bottom: 15px;
     left: 10px;
@@ -71,7 +71,7 @@ body {
     transition: ease-in 0.2s;
 }
 
-.mainAd .mainAd_imgWrapper a:hover {
+.mainAd_imgWrapper a:hover {
     background-color: var(--lightblue);
     transition: ease-in 0.2s;
 }
@@ -91,13 +91,19 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.carousel a{
+    flex: 1 1 0;
+    align-self: center;
 }
 
 .carousel img {
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 100%;
-    max-height: auto;
+    /* min-width: 90%;
+    min-height: 500px; */
+    width: 100%;
+    height: 300px;
 }
 
 .carousel .card {

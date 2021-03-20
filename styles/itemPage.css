@@ -17,7 +17,6 @@
     justify-content: space-between;
     padding: var(--spacing);
     padding-top: 30px;
-
 }
 
 .itemImg {
@@ -33,7 +32,7 @@
     flex: 2;
 }
 
-.itemImg .Img {
+.Img {
     width: 300px;
     height: 400px;
     margin: 5px;
@@ -44,23 +43,36 @@
     padding-top: 20px;
 }
 
-.itemDets .category {
+.itemDetsWrapper{
+    position: relative;
+    width: 80%;
+}
+
+.category {
     font-size: var(--medium);
     margin-bottom: 15px;
 }
 
-.itemDets .name {
+.name {
     margin-bottom: 30px;
     font-size: var(--large);
     font-weight: bold;
 }
 
-.itemDets .size {
+.size {
     margin-bottom: 15px;
     font-size: var(--small);
 }
 
-.itemDets .sizeOption {
+.price {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: var(--small);
+    /* padding-right: 85px; */
+}
+
+.sizeOption {
     /* display: flex;
     justify-content: space-between;*/
     text-align: center;
@@ -69,7 +81,7 @@
     height: auto;
 }
 
-.itemDets .sizeOption button {
+.sizeOption button {
     margin: 2px;
     width: 120px;
     min-height: 50px;
@@ -77,21 +89,37 @@
     border-width: 0px;
 }
 
-.itemDets .addCart {
+.addCart {
     /* display: inline; */
     text-align: center;
     width: 80%;
 }
 
-.itemDets .addCart button {
+.addCart button {
     height: 50px;
-    margin: 10px;
+    margin: 20px 0 10px 0;
     width: 70%;
     color: white;
     background-color: var(--black);
     border-radius: 30px;
+    font-size: var(--small);
 }
 
 .itemDets :is(.itemDecs, .itemColors) {
     font-size: var(--small);
 }
+
+.itemDesc, .itemColors{
+    width: 80%;
+    padding: 10px 0 10px 0;
+    text-align: justify;
+    font-style: italic;
+}
+
+.returnPolicy{
+    width: 80%;
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* remark create contrainer for some div. for width */
