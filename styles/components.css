@@ -56,7 +56,6 @@ div {
 
 /* topheader */
 .topheader {
-    /* try to use em, px, rem */
     height: 35px;
     width: 100%;
     background-color: var(--grey);
@@ -125,10 +124,11 @@ span {
 /* footer */
 .footerWrapper {
     /* problem occur while scrolling */
-    /* position: sticky; */
-    /* bottom: 0;
+    /* position: sticky;
+    bottom: 0;
     left: 0;
     right: 0; */
+    position: relative;
     margin-top: auto;
     height: 30px;
     width: 100%;
@@ -143,26 +143,65 @@ span {
     position: relative;
 }
 
-.footer p{
+.footer p {
     position: absolute;
     top: 50%;
 }
 
 /* sideSide navContainer */
-.navSide ul li.dropDown ul {
-    background-color: var(--yellow);
+
+.btmheader {
+    position: relative;
+}
+
+.dropDown {
+    margin: 0px 0px 0px 36px;
+}
+
+.dropDown button {
+    margin: 0px;
+    padding: 7px 0px 0px 20px;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.dropDown ul {
+    z-index: 99;
     position: absolute;
-    left: 0;
-    padding-left: 0;
-    min-width: 100px;
-    display: none;
+    background: var(--yellow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 200px;
+    top: 25px;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
 }
 
-.navSide ul li.dropDown ul li a {
-    color: yellow;
-    width: 100px;
+.dropDown a{
+    color: black;
+    text-decoration: none;
 }
 
-.navSide ul li.dropDown:hover ul {
-    display: block;
+.dropDown button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dropDown li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropDown li:hover{
+    background: lightyellow;
 }

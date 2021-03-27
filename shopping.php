@@ -1,196 +1,50 @@
+<?php 
+$category = $_GET['category'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/shopping.css">
     <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/shoppingtest.css">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
 </head>
 </head>
+
 <body>
-<?php include "./component/header.php"; ?>
-<?php include "./component/navigator.php"; ?>
+    <?php include "./component/header.php"; ?>
+    <?php include "./component/navigator.php"; ?>
     <div class="button_grp">
-        <div>
-        <ul>
-            <label>Gender</lable>
-		    <li class="btn" class = >All</li>
-            <li class="btn">Woman</li>
-		    <li class="btn">Man</li>
-    
-            <label>Category</lable>
-		    <li class="btn active">#</li>
-		    <li class="btn">#</li>
-            <li class="btn">#</li>
-            <li class="btn">#</li>
-            <li class="btn">#</li>
-            <li class="btn">#</li>
-            <li class="btn">#</li>
-    
-            <label>Price</lable>
-		    <li class="btn active">Low to High</li>
-		    <li class="btn">High to low</li>
-        </ul>
+        <div class="filter">
+            <ul>
+                <label>Gender</lable>
+                    <a href="shoppingtest.php?category=All">
+                        <li class="btn">All</li>
+                    </a>
+                    <a href="shoppingtest.php?category=Men">
+                        <li class="btn">Men</li>
+                    </a>
+                    <a href="shoppingtest.php?category=Women">
+                        <li class="btn">Women</li>
+                    </a>
+                    <a href="shoppingtest.php?category=Kids">
+                        <li class="btn">Kids</li>
+                    </a>
+                    <label>Price</lable>
+                        <a href="shoppingtest.php?category=<?php echo $_GET['category']?>&price=<">
+                            <li class="btn">Low to High</li>
+                        </a>
+                        <a href="shoppingtest.php?category=<?php echo $_GET['category']?>&price=>">
+                            <li class="btn">Low to High</li>
+                        </a>
+            </ul>
+        </div>
+        <div class="container">
+            <?php include "shoppingdata.php";?>
         </div>
     </div>
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div> 
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div> 
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>      
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>
-    <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>          <div class = "container">
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="./img/web_icon3.png" alt="Denim Jeans" style="width:70%">
-            <h1>Tailored Jeans</h1>
-            <p class="price">$19.99</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-    </div>                         
+    <?php include "./component/footer.php"; ?>
 </body>
 </html>

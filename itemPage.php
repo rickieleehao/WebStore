@@ -1,9 +1,18 @@
 <?php
-// include_once('.php');
-$shoes1="./img/Shoes/".$_GET['shoes']."_1.jpg";
-$shoes2="./img/Shoes/".$_GET['shoes']."_2.jpg";
-$shoes3="./img/Shoes/".$_GET['shoes']."_3.jpg";
-$shoes4="./img/Shoes/".$_GET['shoes']."_4.jpg";
+$shoes=$_GET['shoes'];
+$conn = mysqli_connect('localhost','root','','data');
+$query = "SELECT * FROM shoes_data WHERE id = '$shoes'";
+if ($result = mysqli_query($conn,$query)){
+    while($obj = mysqli_fetch_object($result)){
+    $category = "$obj->sub_category";
+    $name = $obj->name;
+    $price = $obj->price;
+    $itemDesc = $obj->product_description;
+    $colorDesc = $obj->color_description;
+}
+}
+
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -20,27 +29,28 @@ $shoes4="./img/Shoes/".$_GET['shoes']."_4.jpg";
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
     <title>FootWear</title>
 </head>
+
 <body>
     <?php include "./component/header.php"; ?>
     <?php include "./component/navigator.php"; ?>
     <div class="itemWrapper">
         <div class="itemImg">
-            <!-- js for img -->
+            <!-- php for img -->
             <div>
-                <img class="Img Img-1" src="<?php echo $shoes1?>">
-                <img class="Img Img-2" src="<?php echo $shoes2?>">
-                <img class="Img Img-3" src="<?php echo $shoes3?>">
-                <img class="Img Img-4" src="<?php echo $shoes4?>">
+                <img class="Img Img-1" src="./img/Shoes/<?php echo $shoes?>_1.jpg">
+                <img class="Img Img-2" src="./img/Shoes/<?php echo $shoes?>_2.jpg">
+                <img class="Img Img-3" src="./img/Shoes/<?php echo $shoes?>_3.jpg">
+                <img class="Img Img-4" src="./img/Shoes/<?php echo $shoes?>_4.jpg">
             </div>
         </div>
         <div class="itemDets">
             <div>
-                <!-- js for text -->
+                <!-- php for text -->
                 <div class="itemDetsWrapper">
-                    <p class="category">Men's Shoe</p>
-                    <p class="name">Nike Air Max 3</p>
+                    <p class="category"><?php echo $category?></p>
+                    <p class="name"><?php echo $name?></p>
                     <p class="size">Select Size</p>
-                    <p class="price">RM 500</p>
+                    <p class="price">RM <?php echo $price?></p>
                 </div>
                 <div class="sizeOption">
                     <div>
@@ -55,13 +65,12 @@ $shoes4="./img/Shoes/".$_GET['shoes']."_4.jpg";
                 <div class="addCart">
                     <button>Add to Cart</button>
                 </div>
-                <p class="itemDesc">Nothing as fly, nothing as comfortable, nothing as proven—the Nike Air Max 3 stays
-                    true to its roots with the iconic Waffle outsole, stitched overlays and classic TPU accents. Fresh
-                    colours give a modern look while Max Air cushioning adds comfort to your journey.</p>
+                <p class="itemDesc"><?php echo $itemDesc?></p>
 
-                <p class="itemColors">- Colour Shown: White/Spruce/Grey/Fog/HotLine</p>
+                <p class="itemColors">- <?php echo $colorDesc?></p>
                 <br><br><br><br>
-                <p class="returnPolicy">No return allowed on any Final Sale items,except for it flaws in workmanship are found (as long as the hang tag has naot been removed)</p>
+                <p class="returnPolicy">No return allowed on any Final Sale items,except for it flaws in workmanship are
+                    found (as long as the hang tag has naot been removed)</p>
 
             </div>
         </div>

@@ -33,7 +33,7 @@
         $email = $_POST["uemail"];
         $password = $_POST["password"];
   
-        loginUser($conn, $email,$password);
+        loginUser($conn, $email, $password);
     }   
 ?>
 </section>
