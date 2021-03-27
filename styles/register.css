@@ -117,7 +117,7 @@ img.avatar {
     width: 30%; /* Could be more or less, depending on screen size */
 }
 
-button{
+#submit{
 	color:rgb(255, 255, 255);
 	background-color:yellow;
 	outline: none;

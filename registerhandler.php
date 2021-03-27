@@ -20,13 +20,16 @@ if (isset($_POST['register'])) {
 
     if (!password_verify($_POST['retype-password'], $password)) {
         echo "Password does not match!";
+        setcookie("result", "0", time() + 10, "/");
     } else if ($result->num_rows == 1) {
         echo "Email has already been registered!";
+        setcookie("result", "1", time() + 10, "/");
     } else {
         $register->execute();
         session_start();
         $_SESSION["email"] = $_POST["email"];
         $_SESSION["name"] = $_POST["name"];
         echo "";
+        setcookie("result", "2", time() + 10, "/");
     }
 }
