@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+  <iframe name="dummyframe" id="dummyframe" title="VGhhbmtzIGZvciBiZWluZyBhIGZ1Y2tpbmcgcGFpbiBpbiB0aGUgYXNzLg==" style="display: none;"></iframe>
 
   <?php include "./component/header.php"; ?>
   <?php include "./component/navigator.php"; ?>
