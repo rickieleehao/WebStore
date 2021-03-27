@@ -26,9 +26,9 @@
         <img id="logo" src="./img/web_iconMain.png" alt="footwearLogo">
         <nav>
             <ul>
-                <li><a href="shoppingtest.php?category=Men">Men</a></li>
-                <li><a href="shoppingtest.php?category=Women">Women</a></li>
-                <li><a href="shoppingtest.php?category=Kids">Kids</a></li>
+                <li><a href="shopping.php?category=Men">Men</a></li>
+                <li><a href="shopping.php?category=Women">Women</a></li>
+                <li><a href="shopping.php?category=Kids">Kids</a></li>
             </ul>
         </nav>
         <a href="#"><img id="cart" src="./img/Shopping-Cart-icon.png" alt="Cart"></a>

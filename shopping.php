@@ -8,7 +8,7 @@ $category = $_GET['category'];
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="./styles/components.css">
-    <link rel="stylesheet" href="./styles/shoppingtest.css">
+    <link rel="stylesheet" href="./styles/shopping.css">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
 </head>
 </head>
@@ -20,24 +20,24 @@ $category = $_GET['category'];
         <div class="filter">
             <ul>
                 <label>Gender</lable>
-                    <a href="shoppingtest.php?category=All">
+                    <a href="shopping.php?category=All">
                         <li class="btn">All</li>
                     </a>
-                    <a href="shoppingtest.php?category=Men">
+                    <a href="shopping.php?category=Men">
                         <li class="btn">Men</li>
                     </a>
-                    <a href="shoppingtest.php?category=Women">
+                    <a href="shopping.php?category=Women">
                         <li class="btn">Women</li>
                     </a>
-                    <a href="shoppingtest.php?category=Kids">
+                    <a href="shopping.php?category=Kids">
                         <li class="btn">Kids</li>
                     </a>
                     <label>Price</lable>
-                        <a href="shoppingtest.php?category=<?php echo $_GET['category']?>&price=<">
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&price=<">
                             <li class="btn">Low to High</li>
                         </a>
-                        <a href="shoppingtest.php?category=<?php echo $_GET['category']?>&price=>">
-                            <li class="btn">Low to High</li>
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&price=>">
+                            <li class="btn">High to Low</li>
                         </a>
             </ul>
         </div>
