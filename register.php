@@ -5,6 +5,29 @@
   <link rel="stylesheet" href="./styles/register.css">
   <link rel="stylesheet" href="./styles/components.css">
   <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
+  <script type="text/javascript">
+    function error() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          if (this.responseText === "") {
+            document.getElementById("error").style.display = "block";
+            document.getElementById("error").innerHTML = "Registration succesful!";
+            setTimeout(() => {
+              window.location = "index.php";
+            }, 3000)
+          } else {
+            document.getElementById("error").style.display = "block";
+            document.getElementById("error").innerHTML = this.responseText;
+          }
+        }
+      }
+      var formData = new FormData(document.querySelector("form"));
+      xhttp.open("POST", "registerhandler.php", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send("register=&email=" + formData.get("email") + "&name=" + formData.get("name") + "&password=" + formData.get("password") + "&retype-password=" + formData.get("retype-password") + "&gender=" + formData.get("gender"));
+    }
+  </script>
 </head>
 
 <body>
@@ -13,9 +36,9 @@
   <!-- <php include "./component/header.php"; ?> -->
   <!-- <php include "./component/footer.php"; ?> -->
   <div id="ID">
-    <form class="register-content animate" action="registerhandler.php" target="dummyframe" method="post">
+    <form class="register-content animate" target="dummyframe" method="post">
       <div class="imgcontainer">
-        <img src="./img/web_icon3.png" alt="Avatar" class="avatar" style="width:150px;height:150px;">
+        <img src="./img/web_iconMain.png" alt="Avatar" class="avatar" style="width:150px;height:150px;">
       </div>
 
       <div class="container">
@@ -40,8 +63,9 @@
           <option value="F">Female</option>
         </select>
       </div>
+      <div id="error" style="display:none"></div>
 
-      <button type="submit" name="register">Register</button>
+      <button type="submit" onclick="error()" name="register">Register</button>
     </form>
   </div>
 </body>

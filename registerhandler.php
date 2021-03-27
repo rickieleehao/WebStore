@@ -19,11 +19,14 @@ if (isset($_POST['register'])) {
     $result = $sql->query($checkemail);
 
     if (!password_verify($_POST['retype-password'], $password)) {
-        echo '<script>alert("Password typed is not the same")</script>';
+        echo "Password does not match!";
     } else if ($result->num_rows == 1) {
-        echo '<script>alert("Email has been registered before!")</script>';
+        echo "Email has already been registered!";
     } else {
         $register->execute();
-        echo 'Register successful, but show in some form';
+        session_start();
+        $_SESSION["email"] = $_POST["email"];
+        $_SESSION["name"] = $_POST["name"];
+        echo "";
     }
 }
