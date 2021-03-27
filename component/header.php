@@ -15,7 +15,7 @@
                 echo "<li>Join Us</li>";
                 echo "<span>|</span>";
                 echo<<<HTML
-                <li onclick="document.getElementById('ID').style.display='block'" style="width:auto;">Sign In</li>
+                <li onclick="document.getElementById('ID').style.display='block'" style="width:auto; cursor: pointer;">Sign In</li>
                 HTML;
             }
             ?>

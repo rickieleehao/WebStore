@@ -3,13 +3,8 @@
 function loginUser($conn,$email,$password){
         $sql = mysqli_query($conn, "SELECT * FROM member WHERE email='$email'");
 
-        if($sql){
-            $row = mysqli_fetch_assoc($sql);
-        }
-        else if (!$sql){
-            echo "\nsql failed!!!";
-            exit();
-        }
+        $row = mysqli_fetch_assoc($sql);
+
         $passVAL = ($password == $row["password"]);
         
         

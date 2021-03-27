@@ -1,10 +1,15 @@
+h1{
+    padding: 18px;
+}
 .faq {
-    background-color: yellow;
+    font-size: 30;
+    font-weight: bold;
+    background-color: #f1f1f1;
     color: #444;
     cursor: pointer;
     margin: auto;
-    padding: 18px;
-    width: 100%;
+    padding: 25px;
+    width: 80%;
     border: none;
     text-align: left;
     outline: none;
@@ -12,13 +17,15 @@
     transition: 0.4s;
 }
   
-.active, .accordion:hover {
-    background-color: #ccc; 
+.active, .faq:hover {
+    background-color: yellow; 
 }
   
 .panel {
-    padding: 0 18px;
+    width: 80%;
+    margin:auto;
+    padding: 25px;
     display: none;
-    background-color: white;
+    background-color: #f1f1f1;
     overflow: hidden;
 }

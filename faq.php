@@ -5,25 +5,22 @@
     <link rel="stylesheet" href="./styles/components.css">
 </head>
 <body>
-    <?php include "./component/header.php"; ?>
-    <?php include "./component/navigator.php"; ?>
-    <h1>FAQ</h1>
-
-    <button class="faq">Section 1</button>
-    <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <button class="faq">Section 2</button>
-    <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <button class="faq">Section 3</button>
-    <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div> 
-
+  <?php include "./component/header.php"; ?>
+  <?php include "./component/navigator.php"; ?>
+      <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'data');
+      ?>
+  <h1>FAQ</h1>
+    <?php
+      $sql = mysqli_query($conn, "SELECT question,answer FROM faq");
+      mysqli_fetch_all($sql, MYSQLI_ASSOC);
+      $i =1;
+      foreach($sql as $row) {
+        echo '<div class="faq">', $i,$row['question'], '</div>';
+        echo '<div class="panel">', $row['answer'], '</div>';
+        $i++;
+      }
+    ?>    
     <?php include "./component/footer.php"; ?>
 </body>
 </html>
@@ -35,11 +32,11 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
     } else {
-      panel.style.display = "block";
+      content.style.display = "block";
     }
   });
 }
