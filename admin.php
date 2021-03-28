@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
-    <link rel = "stylesheet" href = "./styles/admin.css">
+    <link rel="stylesheet" href="./styles/admin.css">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
     <title>Admin</title>
 </head>
@@ -19,14 +19,19 @@
     <?php include "./component/adminheader.php"; ?>
     <?php include "./component/navigator.php"; ?>
 
-        <div class = "button_grp">
-        <ul class = "nobullet">
+    <div class="button_grp">
+        <ul class="nobullet">
             <label>Category</label>
-            <li class= "button">Product</li>
-            <li class= "button">FAQ</li><br/>
+            <a href="admin.php?filter=product"><li class="button">Product</li></a>
+            <a href="admin.php?filter=FAQ"><li class="button">FAQ</li></a>
         </ul>
-        </div>
-    
+    </div>
+    <div class="content">
+        <nav>
+            <?php include "admindata.php"; ?>
+        </nav>
+
+    </div>
 </body>
 
 </html>

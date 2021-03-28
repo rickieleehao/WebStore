@@ -1,7 +1,3 @@
-<?php 
-$category = $_GET['category'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +28,7 @@ $category = $_GET['category'];
                     <a href="shopping.php?category=Kids">
                         <li class="btn">Kids</li>
                     </a>
+                    <!-- sub-category -->
                     <label>Price</lable>
                         <a href="shopping.php?category=<?php echo $_GET['category']?>&price=<">
                             <li class="btn">Low to High</li>

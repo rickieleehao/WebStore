@@ -1,21 +1,21 @@
-body{
+body {
 	background: #f7f8fc;
 	color: #555555;
 }
 
-.button_grp{
+.button_grp {
 	width: 15%;
 	padding: 20px;
 	position: absolute;
 	overflow-y: auto;
-	float:left;
+	float: left;
 }
 
-.button_grp ul{
+.button_grp ul {
 	display: inline-block;
 }
 
-.button_grp ul li{
+.button_grp ul li {
 	background: rgb(255, 255, 255);
 	margin: 10px;
 	padding: 10px 15px;
@@ -25,59 +25,77 @@ body{
 	cursor: pointer;
 	transition: all 0.2s ease;
 	border-radius: 15px;
-	box-shadow: 0px 0.5px 5px rgba(0,0,0,0.125);
+	box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.125);
 }
 
-.button_grp ul label{
-	position:relative;
-	top:0px;
-	left:0px;
-	font-size:16px;
-	color:rgb(0, 0, 0);
+.button_grp ul label {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	font-size: 16px;
+	color: rgb(0, 0, 0);
 }
 
 .button_grp ul li.active,
-.button_grp ul li:hover{
+.button_grp ul li:hover {
 	background-color: #FEF093;
 	box-shadow: 0px 2px 5px #666;
 	transform: translateY(4px);
 }
 
 .button_grp ul.nobullet {
-    list-style-type: none
+	list-style-type: none
 }
 
-h1{
-    margin-left: 4em;
+h1 {
+	margin-left: 4em;
 }
 
-.formclass{
-    margin-left: 8em;
+.formclass {
+	margin-left: 8em;
 }
 
 
-input[type=text], select {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    margin-right: 5px;
-    display: inline-block;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+input[type=text],
+select {
+	width: 20%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	margin-right: 5px;
+	display: inline-block;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
 
-  input[type=submit] {
-    width: 20%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+input[type=submit] {
+	width: 20%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
 
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+
+.content {
+	position: absolute;
+	width: 80%;
+	right: 0;
+}
+
+.content a{
+	text-decoration: none;
+}
+
+.content li{
+	display: inline;
+	text-decoration: none;
+	color: black;
+}
