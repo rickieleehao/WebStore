@@ -1,6 +1,11 @@
+<body>
+    <link rel="stylesheet" href="./styles/admindata.css">
+</body>
 <?php
+
 $conn = mysqli_connect('localhost','root','','data');
 $option = 0;
+
 
 if(!isset($_GET['filter'])){
     if (isset($_GET['category'])) {
@@ -31,18 +36,35 @@ if ($option == 1){
     if ($result = mysqli_query($conn,$query)){
         while($obj = mysqli_fetch_object($result)){
             echo "<div class='product'>";
-            echo "<ul>";
-            echo "<li>".$obj->id."</li>";
-            echo "<li>".$obj->category."</li>";
-            echo "<li>".$obj->sub_category."</li>";
-            echo "<li>".$obj->price."</li>";
-            echo "<li>".$obj->id."</li>";
-            echo "<li>".$obj->category."</li>";
-            echo "<li>".$obj->sub_category."</li>";
-            echo "<li>".$obj->price."</li>";
-            echo "</a>";
-            echo "</ul>";
+            echo "<table border='1px'>";
+            echo "<tr>";
+                echo "<th>Category</th>";
+                echo "<th>Sub Category</th>";
+                echo "<th>Name</th>";
+                echo "<th>Price</th>";
+                echo "<th>Promotion Rate</th>";
+                echo "<th>Color Description</th>";
+                echo "<th>Product Description</th>";
+                echo "<th>Year</th>";
+            echo "</tr>";
+      
+            
+            echo "<tr>";
+                echo "<td>".$obj->category."</td>";
+                echo "<td>".$obj->sub_category."</td>";
+                echo "<td>".$obj->name."</td>";
+                echo "<td>".$obj->price."</td>";
+                echo "<td>".$obj->promotion_rate."</td>";
+                echo "<td>".$obj->color_description."</td>";
+                echo "<td>".$obj->product_description."</td>";
+                echo "<td>".$obj->year."</td>";
+            echo "</tr>";
+            echo "</table>";
             echo "</div>";
+
+            echo "<button> Edit </button>";
+            
+            
         }
     }
 }else if ($option == 2){
@@ -54,10 +76,6 @@ if ($option == 1){
             echo "<ul>";
             echo "<a href='admin.php?category=product&id=".$obj->id."'>";
             echo "<li>".$obj->id."</li>";
-            echo "<li>".$obj->category."</li>";
-            echo "<li>".$obj->sub_category."</li>";
-            echo "<li>".$obj->price."</li>";
-            echo "</a>";
             echo "</ul>";
             echo "</div>";
         }
