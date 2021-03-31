@@ -48,7 +48,6 @@ if ($option == 1){
                 echo "<th>Year</th>";
             echo "</tr>";
       
-            
             echo "<tr>";
                 echo "<td>".$obj->category."</td>";
                 echo "<td>".$obj->sub_category."</td>";
@@ -81,18 +80,22 @@ if ($option == 1){
         }
     }
 }else if ($option == 3){
-    $query = "SELECT * FROM shoes_data";
+    $query = "SELECT * FROM faq";
 
     if ($result = mysqli_query($conn,$query)){
         while($obj = mysqli_fetch_object($result)){
-            echo "<div class='product'>";
-            echo "<ul>";
-            echo "<a href='admin.php?category=product&id=".$obj->id."'>";
-            echo "<li>".$obj->id."</li>";
-            echo "<li>".$obj->id."</li>";
-            echo "<li>".$obj->id."</li>";
-            echo "<li>".$obj->id."</li>";
-            echo "</a>";
+            echo "<div class='FAQ'>";
+            echo "<a href='admin.php?category=product&id=".$obj->fid."'>";
+            echo "<table border='1px'>";
+            echo "<tr>";
+                echo "<th>Question</th>";
+                echo "<td>".$obj->question."</td>";
+            echo "</tr>";
+            echo "<tr>";
+                echo "<th>Answer</th>";
+                echo "<td>".$obj->answer."</td>";
+            echo "</tr>";
+            echo "<li>".$obj->fid."</li>";
             echo "</ul>";
             echo "</div>";
         }
