@@ -22,7 +22,7 @@
         <h1>Taking Care of Your Shoes</h1>
         <h2>Shoes need some lovin' too</h2>
         <div class="blog-crop">
-            <img src="./img/blog/shoe-care-1.jpg" alt="Image of footwear">
+            <img src="./img/blog/shoe-care-1.jpg" alt="Image of someone polishing a leather shoe">
         </div>
         <div class="flexbox" id="infobox">
             <div id="author">By Koh Jun Dong | Published 25 December 2020</div>
