@@ -1,17 +1,35 @@
 .blog-content {
-    width: 57.5rem;
+    width: 50rem;
     max-width: 100%;
     padding: 1rem 1rem;
     margin: auto;
 }
 
+.blog-section {
+    padding: 0 0 0.5rem 0;
+}
+
 .blog-text {
+    margin: auto;
     padding: 0 0.5rem;
+    width: 40rem;
 }
 
 .blog-text p {
     font-size: 1.25rem;
-    padding: 0 0 1rem 0;
+    line-height: 1.9rem;
+    padding: 0 0 1.5rem 0;
+}
+
+.blog-text .blog-list {
+    list-style-position: outside;
+    padding: 0 0 1.5rem 2rem;
+}
+
+.blog-text .blog-list li {
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+    padding: 0 0 0.5rem 0;
 }
 
 .blog-crop {
@@ -26,7 +44,13 @@
 .blog-crop img {
     width: 57.5rem;
     max-width: 100%; 
-    margin: -15% 0 0 0;
+    border: solid 1px #c0c0c0;
+}
+
+.blog-crop .blog-caption {
+    color: #757575;
+    font-size: 0.9rem;
+    padding: 0 0 0.5rem 0;
 }
 
 #author {
@@ -42,7 +66,7 @@
 }
 
 #social {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 #social img {
@@ -61,8 +85,14 @@ h2 {
     color: #757575;
 }
 
+h3 {
+    font-size: 1.5rem;
+    padding: 0 0 1rem 0;
+}
+
 #infobox {
     display: block;
+    padding: 0 0 2rem 0;
 }
 
 .flexbox {
@@ -80,12 +110,15 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.sources {
+.sources{
+    list-style-position: inside;
     transition: opacity 0.5s ease, height 0.5s ease;
-    margin-left: 1rem;
     font-size: 0.9rem;
-    color: #757575;
     line-height: 1.5rem;
+}
+
+.sources a:link {
+    color: #757575;
 }
 
 .sources.animateShow {

@@ -1,156 +1,116 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 
-*{
-    font-family: 'Noto Sans', sans-serif;
-}
-.container{
-	position:relative;
-	margin-bottom:5px;
+.avatar {
+    max-width: 5rem;
+    height: 5rem;
 }
 
-.container label{
-	position:relative;
-	top:0px;
-	left:0px;
-	font-size:14px;
-	color:rgb(0, 0, 0);	
-    pointer-events:none;
-	transition: all 0.05s ease-in-out;
+.register-imgcontainer {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
 }
 
-.dropdown {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.register-container {
+    margin-bottom: 2rem;
 }
 
-.dropdown select {
-    background-color: yellow;
-    color: black;
-    padding: 8px;
-    width: 100px;
-    border: none;
-    font-size: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    -webkit-appearance: button;
-    appearance: button;
+.register-container h1{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.register-container p {
+    margin: auto;
+    font-size: 1rem;
+    text-align: center;
+    color: #909090;
+}
+
+.register-container .desc {
+    width: 20rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.register-container .disclaimer {
+    width: 24rem;
+}
+
+.register-container input {
+    font-size: 0.9rem;
+    border: 0;
+    border-bottom: 1px solid #c0c0c0;  
+    width: 100%;
+    padding: 0.625rem 0 0.125rem;
+}
+
+.register-container input:focus, .register-container input:hover{ 
     outline: none;
-  }
-
-.dropdown::before {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 50%;
-    text-align: center;
-    font-size: 12px;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-  }
-  
-.dropdown:hover::before {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-  
-.dropdown select option {
-    padding: 15px;
+    border-bottom: 1px solid #000000;	
+    transition: all 0.15s ease-in-out;
 }
 
-.container input {
-    border:0;
-    border-bottom:1px solid #555;  
-    background:transparent;
-    width:100%;
-    padding:4px 0 2px 0;
-    font-size:14px;
-    color:rgb(0, 0, 0);
+.register-dropdown select {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    width: 6.25rem;
+    border: solid 1px #c0c0c0;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    margin: 0 0 2rem 0;
+    transition: all 0.15s ease-in-out;
 }
 
-.container input:focus{ 
-    border:none;	
-    outline:none;
-    border-bottom:1px solid yellow;	
+.register-dropdown select:focus, .register-dropdown select:hover{
+    outline: 0;
+    border: solid 1px #606060;
+    transition: all 0.15s ease-in-out;
 }
   
-  
-  /* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-  
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-  
-.container {
-    padding: 12px;
-}
-
-/* The Login (background) */
-.register {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 30%; /* Full width */
-    height: 30%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 5px;
-  }
-  
-/* Login Content/Box */
 .register-content {
-    background-color: #ffffff;
-    margin: 1px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    margin: 4rem auto; 
+    width: 24rem; 
 }
 
-#submit{
-	color:rgb(255, 255, 255);
-	background-color:yellow;
-	outline: none;
-    border: 0.5;
-    color: rgb(0, 0, 0);
-	padding:5px 20px;
-	text-transform:uppercase;
-	margin-top:1px;
-	border-radius:1px;
-	cursor:pointer;
-	position:relative;
-    right: -75%;
+.register-prompt input{
+    border-bottom: 2px solid #FF0000;
+    transition: all 0.15s ease-in-out;
 }
 
-  
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-  
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+.register-prompt input:hover, .register-prompt input:focus{
+    border-bottom: 2px solid #000000;
+    transition: all 0.15s ease-in-out;
 }
 
-.container input:focus ~ label,
-.container input:valid ~ label{
-	top:-12px;
-	font-size:12px;
+#register-error div { 
+    margin: 0 0 2rem 0;
+    padding: 0.25rem 0.8rem;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #FFE0E0;
+}
+
+#register-error, .reg-submit-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#register-submit{
+    width: 80%;
+    outline: 0;
+    border: solid 1px #ffe433;
+    font-size: 0.8rem;
+    font-weight: bold;
+	background-color: #ffe433;
+	padding: 0.4rem 1rem;
+	text-transform: uppercase;
+	border-radius: 3px;
+	cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+#register-submit:focus, #register-submit:hover{
+    border: solid 1px #606060;
+    transition: all 0.15s ease-in-out;
 }

@@ -12,46 +12,67 @@
 
   <?php include "./component/header.php"; ?>
   <?php include "./component/navigator.php"; ?>
-  <h2>Become a member</h2>
 
-  <form class="register-content animate" action="registerhandler.php" target="dummyframe" method="post">
-    <div class="imgcontainer">
-      <img src="./img/web_iconMain.png" alt="Avatar" class="avatar" style="width:150px;height:150px;">
+  <form class="register-content" action="registerhandler.php" target="dummyframe" method="post">
+    <div class="register-imgcontainer">
+      <img src="./img/web_iconMain.png" alt="Avatar" class="avatar">
     </div>
-
-    <div class="container">
+    <div class="register-container">
+      <h1>Become A Member</h1>
+      <p class="desc">Create your profile and be one of the proud member of our store!</p>
+    </div>
+    <div class="register-container">
       <label>Email</label>
-      <input type="email" name="email" required>
+      <input onclick="promptError(false, 1);" type="email" name="email" required>
     </div>
-    <div class="container">
+    <div class="register-container">
       <label>Name</label>
       <input type="text" name="name" required>
     </div>
-    <div class="container">
+    <div class="register-container">
       <label>Password</label>
-      <input type="password" name="password" autocomplete="new-password" maxlength="72" required>
+      <input onclick="promptError(false, 3);" type="password" name="password" autocomplete="new-password" maxlength="72" required>
     </div>
-    <div class="container">
+    <div class="register-container">
       <label>Retype Password</label>
-      <input type="password" name="retype-password" autocomplete="new-password" maxlength="72" required>
+      <input onclick="promptError(false, 4);" type="password" name="retype-password" autocomplete="new-password" maxlength="72" required>
     </div>
-    <div class="dropdown">
+    <div class="register-dropdown">
       <select name="gender">
         <option value="M">Male</option>
         <option value="F">Female</option>
       </select>
     </div>
-    <div id="error" style="display:none"></div>
-
-    <button id="submit" type="submit" onclick="error()" name="register">Register</button>
+    <div id="register-error" style="display:none">
+      <div>Test</div>
+    </div>
+    <div class="register-container">
+      <p class="disclaimer">By signing up to our service, you agree to our Privacy Policy and Terms Of Use.</p>
+    </div>
+    <div class="reg-submit-div">
+      <button id="register-submit" type="submit" onclick="error()" name="register">Register</button>
+    </div>
   </form>
 
   <?php include "./component/footer.php"; ?>
   <script type="text/javascript">
     const timer = ms => new Promise(res => setTimeout(res, ms));
 
+    function promptError(enable, selector) {
+      if (enable) {
+        document.getElementsByClassName("register-container")[selector].classList.add('register-prompt');
+        document.getElementsByClassName("register-container")[selector].childNodes[3].value = "";
+      } else {
+        document.getElementsByClassName("register-container")[selector].classList.remove('register-prompt');
+      }
+    }
+
+
     function error() {
-      document.getElementById("error").style.display = "none";
+      document.getElementById("register-error").style.display = "none";
+      promptError(false, 1);
+      promptError(false, 3);
+      promptError(false, 4);
       loop().then(
         function(value) {
           decision(value);
@@ -62,18 +83,21 @@
     function decision(action) {
       switch (parseInt(action)) {
         case 0:
-          document.getElementById("error").innerHTML = "Password does not match!";
+          document.getElementById("register-error").childNodes[1].innerHTML = "Password does not match!";
+          promptError(true, 3);
+          promptError(true, 4);
           break;
         case 1:
-          document.getElementById("error").innerHTML = "Email has been registered!";
+          document.getElementById("register-error").childNodes[1].innerHTML = "Email has been registered before!";
+          promptError(true, 1);
           break;
         case 2:
-          document.getElementById("error").innerHTML = "Registration successful! You will be redirected.";
+          document.getElementById("register-error").childNodes[1].innerHTML = "Registration successful! You will be redirected.";
           setTimeout(() => {
             window.location = "index.php";
-          }, 5000)
+          }, 3000)
       }
-      document.getElementById("error").style.display = "block";
+      document.getElementById("register-error").style.display = "flex";
       document.cookie = "result=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
 
