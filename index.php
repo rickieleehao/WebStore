@@ -25,7 +25,7 @@
         <div class = "mainAd_imgWrapper">
             <img class="mainAd_img">
             <div>
-                <a href="#">Shop</a>
+                <a href="shopping.php?category=All">Shop</a>
             </div>
         </div>
     </div>

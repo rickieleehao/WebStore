@@ -64,6 +64,13 @@
 	margin: 10px 10px 10px 10px;
 	background-color: whitesmoke;
 	position: relative;
+	transition: ease-in 0.2s;
+}
+
+.card:hover{
+	box-shadow: 0px 0px 10px var(--yellow);
+	transform: translate(0px, -5px);
+    transition: ease-in 0.2s;
 }
 
 .card h1{

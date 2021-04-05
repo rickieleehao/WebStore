@@ -4,6 +4,7 @@ $conn = mysqli_connect('localhost','root','','data');
 $query = "SELECT * FROM shoes_data WHERE id = '$shoes'";
 if ($result = mysqli_query($conn,$query)){
     while($obj = mysqli_fetch_object($result)){
+    $id = "$obj->id";  
     $category = "$obj->sub_category";
     $name = $obj->name;
     $price = $obj->price;
@@ -63,7 +64,13 @@ mysqli_close($conn);
                     </div>
                 </div>
                 <div class="addCart">
-                    <button>Add to Cart</button>
+                    <form action="cart.php" method="POST">
+                        <input type="hidden" name="item_id" value = "<?php echo $id?>">
+                        <input type="hidden" name="item_name" value = "<?php echo $name?>">
+                        <input type="hidden" name="item_price" value = "<?php echo $price?>">
+                        <input type="hidden" name="addcart" value = "">
+                        <button type="submit">Add to Cart</button>
+                    </form>
                 </div>
                 <p class="itemDesc"><?php echo $itemDesc?></p>
 

@@ -1,0 +1,62 @@
+.totalsummary{
+    margin-top: 40px;
+    display: flex;
+    padding: var(--spacing);
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+}
+
+.cartWrapper{
+    padding-top: 50px;
+    width: 100%;
+}
+
+.summary{
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.summary .summaryWrapper{
+    border: 1px solid black;
+    padding: 50px 0px 50px 0px;
+}
+
+.summary .summaryWrapper h1{
+    margin: 20px 0px 20px 0px;
+}
+
+.summary .summaryWrapper button{
+    height: 50px;
+    margin: 20px 0 10px 0;
+    width: 70%;
+    color: white;
+    background-color: var(--black);
+    border-radius: 30px;
+    font-size: var(--small);
+}
+
+.card{
+    display: flex;
+    align-items: center;
+}
+
+.card .left{
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.card .right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    height: 100px;
+}
+
+.card img{
+    margin-left: 20px;
+    width: 250px;
+    height: 300px;
+}
