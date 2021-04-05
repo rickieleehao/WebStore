@@ -1,17 +1,15 @@
 <?php
-    include 'login.php';
     session_start();
-    // session_unset();
-    // session_destroy();
+    include 'login.php';  
 ?>
 
 <section class = "topheader">
         <ul>
             <?php
-            if (isset($_SESSION["email"])){
+            if (isset($_SESSION["userid"])){
                 echo $_SESSION["name"];
                 echo "<span>|</span>";
-                echo "<li><a href='logout.php'>Logout</a></li>";
+                echo "<a href='logout.php'><li>Logout</li></a>";
             }
             else{
                 echo "<li>Join Us</li>";

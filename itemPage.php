@@ -1,6 +1,7 @@
 <?php
+include_once "configdb.php";
 $shoes=$_GET['shoes'];
-$conn = mysqli_connect('localhost','root','','data');
+
 $query = "SELECT * FROM shoes_data WHERE id = '$shoes'";
 if ($result = mysqli_query($conn,$query)){
     while($obj = mysqli_fetch_object($result)){

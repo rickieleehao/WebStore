@@ -12,6 +12,4 @@
     } else {
         echo '<script type="text/javascript"> alert("Record added failed") </script>';
     }
-    mysqli_close($conn);
-    header("refresh:0; url=admin.php?filter=FAQ");
 ?>
