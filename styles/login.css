@@ -32,39 +32,38 @@
     border-style:solid;	
 }
   
-/* Set a style for all buttons */
-button {
-    color:rgb(255, 255, 255);
-	background-color:yellow;
-	outline: none;
-    border: 0;
-    color: rgb(0, 0, 0);
-	padding:10px 20px;
-	text-transform:uppercase;
-	margin-top:50px;
-	border-radius:2px;
-	cursor:pointer;
-	position:relative;
-}
+
 
 button[type = "submit"] {
-	color:rgb(255, 255, 255);
+	color:rgb(0, 0, 0);
 	background-color:yellow;
-	outline: none;
-    border: 0;
-    color: rgb(0, 0, 0);
-	padding:5px 10px;
-	text-transform:uppercase;
-	margin-top:5px;
-	border-radius:2px;
-	cursor:pointer;
-    position:relative;
-    right:-85%;
+    padding: 15px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin:auto;
+    float:right;
 }
+
+button[type = "submit"]:hover {
+    background-color: red;
+}
+
+button[type = "submit"]:active {
+    background-color: yellow;
+    box-shadow: 1px #666;
+    transform: translateY(2px);
+  }
   
 button:hover {
     opacity: 0.8;
 }
+
 
   
 /* Extra styles for the cancel button */
@@ -93,7 +92,7 @@ img.avatar {
 /* The Login (background) */
 .login {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
@@ -110,7 +109,7 @@ img.avatar {
     background-color: #ffffff;
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    width: 25%; /* Could be more or less, depending on screen size */
 }
 
 .fail{

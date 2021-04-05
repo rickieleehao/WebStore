@@ -17,7 +17,8 @@ body {
 
 .button_grp ul li {
 	background: rgb(255, 255, 255);
-	margin: 10px;
+	float:left;
+	margin: 15px;
 	padding: 10px 15px;
 	min-width: 80px;
 	text-align: center;
@@ -29,7 +30,9 @@ body {
 }
 
 .button_grp ul label {
-	position: relative;
+	padding: 5px 10px;
+	position: absolute;
+	float:left;
 	top: 0px;
 	left: 0px;
 	font-size: 16px;
@@ -45,6 +48,10 @@ body {
 
 .button_grp ul.nobullet {
 	list-style-type: none
+}
+
+.button_grp ul label{
+	margin:5px;
 }
 
 h1 {

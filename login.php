@@ -16,9 +16,9 @@
         <div class="container">
             <label>Password</label>
             <input type="password" name="password" required>
-            <a href="javascript:alert('Contact Customer Service for Password Reset');">Forgot password</a>
+            <a href="contact.php">Forgot password</a>
+            <button type="submit" class="btn" name="login">Login</button>
         </div>
-        <button type="submit" class="btn" name="login">Login</button>
     </form>
 </div>
 

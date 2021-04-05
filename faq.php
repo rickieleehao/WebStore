@@ -7,16 +7,15 @@
 <body>
   <?php include "./component/header.php"; ?>
   <?php include "./component/navigator.php"; ?>
-      <?php
-        $conn = mysqli_connect('localhost', 'root', '', 'data');
-      ?>
+     
   <h1>FAQ</h1>
     <?php
+      $conn = mysqli_connect('localhost', 'root', '', 'data');
       $sql = mysqli_query($conn, "SELECT question,answer FROM faq");
       mysqli_fetch_all($sql, MYSQLI_ASSOC);
       $i =1;
       foreach($sql as $row) {
-        echo '<div class="faq">', $i,$row['question'], '</div>';
+        echo '<div class="faq">', $i , ") ",$row['question'], '</div>';
         echo '<div class="panel">', $row['answer'], '</div>';
         $i++;
       }
