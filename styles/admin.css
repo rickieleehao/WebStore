@@ -4,7 +4,7 @@ body {
 }
 
 .button_grp {
-	width: 15%;
+	width: 200px;
 	padding: 20px;
 	position: absolute;
 	overflow-y: auto;

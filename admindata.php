@@ -108,6 +108,8 @@ if ($option == 1){
             <th>SHOE ID</th>
             <th>CATEGORY</th>
             <th>NAME</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
         HTML;
     if ($result = mysqli_query($conn,$query)){

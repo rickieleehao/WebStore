@@ -20,7 +20,7 @@ function loginUser($conn,$email,$password){
         
         if ($passVAL){
             session_start();
-            $_SESSION["userid"] = $row["id"];
+            // $_SESSION["userid"] = $row["id"];
             $_SESSION["email"] = $row["email"];
             $_SESSION["name"] = $row["name"];
             header("location: index.php");

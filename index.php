@@ -19,7 +19,7 @@
     <div class="mainAd">
         <div class="mainAd_category">
             <p id="category-gender">Men</p>
-            <p>Shoes</p>
+            <!-- <p>Shoes</p> -->
             <p id="category-gender-end"></p>
         </div>
         <div class = "mainAd_imgWrapper">

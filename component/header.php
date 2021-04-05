@@ -6,13 +6,13 @@
 <section class = "topheader">
         <ul>
             <?php
-            if (isset($_SESSION["userid"])){
+            if (isset($_SESSION["email"])){
                 echo $_SESSION["name"];
                 echo "<span>|</span>";
                 echo "<a href='logout.php'><li>Logout</li></a>";
             }
             else{
-                echo "<li>Join Us</li>";
+                echo "<a href='register.php'><li>Join Us</li></a>";
                 echo "<span>|</span>";
                 echo<<<HTML
                 <li onclick="document.getElementById('ID').style.display='block'" style="width:auto; cursor: pointer;">Sign In</li>
