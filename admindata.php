@@ -195,8 +195,8 @@ if ($option == 1){
     echo<<<HTML
                 <form action="admindatacreate.php" method="POST">
                     <div class="container">
-                        <label>Product ID: </label>
-                        <input type="hidden" name="id">
+                        <label>Product ID: </label><br>
+                        <input type="text" name="id">
                     </div>
                     <div class="container">
                         <label>Name</label><br>
