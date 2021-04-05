@@ -38,7 +38,7 @@
                         </a>
             </ul>
         </div>
-        <div class="container">
+        <div class="shoppingContainer">
             <?php include "shoppingdata.php";?>
         </div>
     </div>

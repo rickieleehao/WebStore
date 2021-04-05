@@ -1,8 +1,22 @@
 <?php
-$conn = mysqli_connect('localhost','root','','data');
+if(!isset($_SESSION['userid'])){
+    echo '<script type="text/javascript"> alert("Required login to view the cart or add product.") </script>';
+    header("refresh:0; url=index.php");
+}
+
 $totalPrice = 0;
 
-if(isset($_POST['addcart'])){
+if(isset($_GET['action'])){
+    if($_GET['action'] == "delete"){
+        foreach($_SESSION['cart'] as $key=>$value){
+            if($value['item_id'] == $_GET['id']){
+                unset($_SESSION['cart'][$key]);
+            }
+        }
+    }   
+}
+
+if(isset($_POST['addcart'])&&isset($_SESSION['userid'])){
     if(isset($_SESSION['cart'])){
         $count = count($_SESSION['cart']);
         $item_array = array (
@@ -32,8 +46,8 @@ if(isset($_SESSION['cart'])){
             echo "</div>";
             echo "<div class='card right'>";
             echo "<h1>".$value['item_name']."</h1>";
-            // echo "<p>".$obj->sub_category."</p>";
             echo "<p class='price'>RM ".$value['item_price']."</p>";
+            echo "<a href='cart.php?action=delete&id=".$value['item_id']."'>Remove</a>";
             echo "</div>";
             echo "</div>";
             $totalPrice += $value['item_price'];
