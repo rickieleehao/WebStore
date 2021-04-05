@@ -1,6 +1,8 @@
 <?php
 $conn = mysqli_connect('localhost','root','','data');
+
 $category=$_GET['category'];
+
 if(isset($_GET['price'])){
     $price = $_GET['price'];
     if ($price == ">"){ //Price High to Low

@@ -1,6 +1,8 @@
 <?php
     include 'login.php';
     session_start();
+    // session_unset();
+    // session_destroy();
 ?>
 
 <section class = "topheader">
@@ -23,7 +25,7 @@
 </section>
 <div class="headerWrapper">
     <div class="header">
-        <img id="logo" src="./img/web_iconMain.png" alt="footwearLogo">
+        <a href="index.php"> <img id="logo" src="./img/web_iconMain.png" alt="footwearLogo"></a>
         <nav>
             <ul>
                 <li><a href="shopping.php?category=Men">Men</a></li>
@@ -31,6 +33,6 @@
                 <li><a href="shopping.php?category=Kids">Kids</a></li>
             </ul>
         </nav>
-        <a href="#"><img id="cart" src="./img/Shopping-Cart-icon.png" alt="Cart"></a>
+        <a href="cart.php"><img id="cart" src="./img/Shopping-Cart-icon.png" alt="Cart"></a>
     </div>
 </div>

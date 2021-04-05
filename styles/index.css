@@ -72,7 +72,7 @@ body {
 }
 
 .mainAd_imgWrapper a:hover {
-    background-color: var(--lightblue);
+    background-color: var(--yellow);
     transition: ease-in 0.2s;
 }
 
@@ -90,42 +90,60 @@ body {
     max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.carousel .card{
-    width: 200px;
-    margin: 0px 10px 0px 10px;
+.carousel .card {
+    width: 350px;
+    margin: 10px 40px 10px 40px;
+    height: 500px;
 }
 
-.carousel a{
+.carousel a {
     flex: 1 1 0;
     align-self: center;
     text-align: center;
 }
 
 .carousel img {
-    /* position:; */
+    position: relative;
     background: lightcyan;
     line-height: 250px;
-    width: 200px;
+    width: 350px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     transition: ease-in 0.2s;
-    margin: 0px 5px 0px 5px;
-    width: 100%;
-    height: 300px;
+    /* margin: 0px 5px 0px 5px; */
+    height: 400px;
 }
 
 .carousel .card:hover {
-    /* box-shadow: 5px 5px 5px var(--yellow,0.1); */
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     transform: translate(-5px, -5px);
     transition: ease-in 0.2s;
 }
 
 .carousel .cardDesc {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.carousel .cardDesc .name {
+    flex: 2;
+    height: 80px;
+    text-align: left;
+}
+
+/* .carousel .cardDesc .name p {
+    position: absolute;
+    bottom: 0px;
+} */
+
+.carousel .cardDesc .cardPrice {
+    flex: 1;
+    text-align: right;
+    margin-right: 5px;
 }

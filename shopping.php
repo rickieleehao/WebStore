@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/shopping.css">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">

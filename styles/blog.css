@@ -1,17 +1,80 @@
 .blog-content {
-    width: 57.5rem;
+    width: 50rem;
     max-width: 100%;
     padding: 1rem 1rem;
     margin: auto;
 }
 
+.blog-content hr {
+    background-color: black;
+    height: 3px;
+}
+
+.blog-content a:link, a:visited {
+    text-decoration: none;
+}
+
+.blog-showcase {
+    cursor: pointer;
+    margin: 2.5rem 0;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.blog-showcase img {
+    margin: 0 1rem 0 1rem;
+    height: auto;
+    max-width: 20rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.blog-showcase div{
+    width: 100%;
+    text-align: center;
+}
+
+.blog-showcase div h2 {
+    color: #000000;
+    font-size: 1.8rem;
+}
+
+.blog-showcase div h3 {
+    color: #606060;
+    font-size: 1.4rem;
+}
+
+.blog-showcase div p {
+    color: #757575;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.blog-section {
+    padding: 0 0 0.5rem 0;
+}
+
 .blog-text {
+    margin: auto;
     padding: 0 0.5rem;
+    width: 40rem;
 }
 
 .blog-text p {
     font-size: 1.25rem;
-    padding: 0 0 1rem 0;
+    line-height: 1.9rem;
+    padding: 0 0 1.5rem 0;
+}
+
+.blog-text .blog-list {
+    list-style-position: outside;
+    padding: 0 0 1.5rem 2rem;
+}
+
+.blog-text .blog-list li {
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+    padding: 0 0 0.5rem 0;
 }
 
 .blog-crop {
@@ -26,7 +89,13 @@
 .blog-crop img {
     width: 57.5rem;
     max-width: 100%; 
-    margin: -15% 0 0 0;
+    border: solid 1px #c0c0c0;
+}
+
+.blog-crop .blog-caption {
+    color: #757575;
+    font-size: 0.9rem;
+    padding: 0 0 0.5rem 0;
 }
 
 #author {
@@ -42,7 +111,7 @@
 }
 
 #social {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 #social img {
@@ -58,11 +127,17 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
-    color: #757575;
+    color: #606060;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding: 0 0 1rem 0;
 }
 
 #infobox {
     display: block;
+    padding: 0 0 2rem 0;
 }
 
 .flexbox {
@@ -80,12 +155,16 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.sources {
+.sources{
+    list-style-position: inside;
     transition: opacity 0.5s ease, height 0.5s ease;
-    margin-left: 1rem;
     font-size: 0.9rem;
-    color: #757575;
     line-height: 1.5rem;
+    text-decoration: underline;
+}
+
+.sources a:link {
+    color: #757575;
 }
 
 .sources.animateShow {
@@ -108,4 +187,8 @@ h2 {
         text-align: right;
         flex-grow: 1;
     }
+}
+
+.blog-content .spacer {
+    padding: 2rem 0 1rem 0;
 }
