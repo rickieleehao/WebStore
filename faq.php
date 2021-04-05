@@ -8,7 +8,7 @@
   <?php include "./component/header.php"; ?>
   <?php include "./component/navigator.php"; ?>
      
-  <h1>FAQ</h1>
+  <p>FAQ</p>
     <?php
       $conn = mysqli_connect('localhost', 'root', '', 'data');
       $sql = mysqli_query($conn, "SELECT question,answer FROM faq");
