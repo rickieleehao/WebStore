@@ -12,7 +12,6 @@
     <?php
       $conn = mysqli_connect('localhost', 'root', '', 'data');
       $sql = mysqli_query($conn, "SELECT question,answer FROM faq");
-      mysqli_fetch_all($sql, MYSQLI_ASSOC);
       $i =1;
       foreach($sql as $row) {
         echo '<div class="faq">', $i , ") ",$row['question'], '</div>';

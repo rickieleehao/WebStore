@@ -166,7 +166,7 @@ if ($option == 1){
                         <textarea name="question" class="small">$obj->question</textarea>
                     </div>
                     <div class="container">
-                        <label>Product Description</label><br>
+                        <label>Answer</label><br>
                         <textarea name="answer" class="big">$obj->answer</textarea>
                     </div>
                     <div class="container btn">
@@ -185,7 +185,7 @@ if ($option == 1){
             <textarea name="question" class="small" required></textarea>
         </div>
         <div class="container">
-            <label>Product Description</label><br>
+            <label>Answer</label><br>
             <textarea name="answer" class="big" required></textarea>
         </div>
             <div class="container btn">
