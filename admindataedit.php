@@ -12,9 +12,8 @@ if (isset($_POST['id'])) {
     $C_description = $_POST['c_description'];
     $P_description = $_POST['p_description'];
 
-    echo $_POST['id'];
-    $sql = $conn->prepare("UPDATE shoes_data SET name = ?, category = ?, sub_category = ?, price = ?, year = ?, promotion_rate = ?, color_description = ?, product_description = ? WHERE id = ?");
-    $sql->bind_param("sssdidsss", $name, $category, $sub, $price, $year, $p_rate, $C_description, $P_description, $id);
+    $sql = $conn->prepare("UPDATE `shoes_data` SET `name` = ?, `category` = ?, `sub_category` = ?, `price` = ?, `year` = ?, `promotion_rate` = ?, `color_description` = ?, `product_description` = ? WHERE `id` = ?");
+    $sql->bind_param("sssdidsss", $name, $category, $sub, $price, $year, $p_rate, $C_description,$P_description, $id);
     if ($sql->execute()) {
         echo '<script type="text/javascript"> alert("Updated") </script>';
     } else {
