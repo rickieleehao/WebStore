@@ -4,8 +4,6 @@
 <?php
 
 $conn = mysqli_connect('localhost', 'root', '', 'data');
-$option = 0;
-
 
 if (!isset($_GET['filter'])) {
     if (isset($_GET['category'])) {
