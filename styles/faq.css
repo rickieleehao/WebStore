@@ -1,0 +1,31 @@
+.faq_main h1{
+    padding: var(--spacing);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faq {
+    font-weight: bold;
+    background-color: var(--yellow);
+    color: #444;
+    cursor: pointer;
+    margin: auto;
+    padding: 25px;
+    width: 80%;
+    text-align: left;
+    outline: none;
+}
+
+.panel {
+    width: 80%;
+    margin: auto;
+    padding: 25px;
+    display: none;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.faqWrapper{
+    min-height: 700px;
+}

@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.button_grp {
+	position: relative;
+	overflow: hidden;
+}
+
+.button_grp a {
+	text-decoration: none;
+	color: black;
+}
+
+.filter {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.filter ul {
+	display: inline-block;
+}
+
+.filter li {
+	background: rgb(255, 255, 255);
+	margin: 10px;
+	padding: 10px 15px;
+	min-width: 80px;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button_grp ul li.active,
+.button_grp ul li:hover {
+	background-color: yellow;
+	box-shadow: 0px 2px 5px #666;
+	transform: translateY(4px);
+}
+
+.shoppingContainer {
+	width: 81%;
+	min-height: 750px;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	right: 10px;
+	padding-right: 50px;
+}
+
+.card {
+	box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+	width: 200px;
+	height: 300px;
+	text-align: center;
+	margin: 10px 10px 10px 10px;
+	background-color: whitesmoke;
+	position: relative;
+	transition: ease-in 0.2s;
+}
+
+.card:hover{
+	box-shadow: 0px 0px 10px var(--yellow);
+	transform: translate(0px, -5px);
+    transition: ease-in 0.2s;
+}
+
+.card h1{
+	position: absolute;
+	top: 60%;
+	width: 100%;
+	font-size: var(--small);
+	padding: 0px 10px 0px 10px;
+}
+
+.price {
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	color: grey;
+	font-size: var(--smaller);
+}

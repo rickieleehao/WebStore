@@ -1,0 +1,183 @@
+body {
+	background: #f7f8fc;
+	color: #555555;
+}
+
+.button_grp {
+	width: 200px;
+	padding: 20px;
+	float: left;
+}
+
+.button_grp ul li {
+	background: rgb(255, 255, 255);
+	float: left; 
+	margin: 10px 15px;
+	padding: 10px;
+	min-width: 100px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.05s ease;
+	border-radius: 5px;
+	box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.125);
+}
+
+.button_grp label {
+	padding: 5px 10px;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 5px;
+}
+
+.button_grp ul li.active,
+.button_grp ul li:hover {
+	background-color: #FEF093;
+	color: #000000;
+	box-shadow: 0px 2px 5px #666;
+	transform: translateY(4px);
+}
+
+.button_grp ul.nobullet {
+	list-style-type: none;
+}
+
+.content {
+	margin-left: 200px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+.content a{
+	text-decoration: none;
+}
+
+.content a span {
+	margin-left: 10px;
+	padding-bottom: 2px;
+	font-size: 24px;
+}
+
+/* admin data */
+
+a, a:visited, a:hover, a:active {
+	color: inherit;
+}
+
+input[type=text],
+input[type=number],
+select,
+textarea {
+	width: 200px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	margin-right: 5px;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+} 
+
+input[type=text]{
+	overflow-y: scroll;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+input[type=number]{
+	-webkit-appearance: textfield;
+	   -moz-appearance: textfield;
+			appearance: textfield;
+}
+
+textarea {
+	width: 500px;
+	resize: none;
+}
+
+input:focus, input:hover, 
+select:focus, select:hover,
+textarea:focus, textarea:hover
+{
+	border: 2px solid #555;
+}
+
+input:read-only {
+	background-color: #E0E0E0;
+	color: #808080;
+}
+
+
+.big{
+	height: 150px;
+}
+
+.small{
+	height: 75px;
+}
+
+
+.button{
+	background-color: yellow;
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.button:hover{
+	background-color: rgb(0, 0, 0);
+	color:white;
+	transition: all 0.15s;
+}
+
+.button:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+
+.container{
+	padding: 5px;
+}
+
+.container button{
+	width: 500px;
+}
+
+.container .btn{
+	align-content: center;
+}
+
+.flexbox {
+	display: flex;
+}
+
+.fa-plus-circle {
+	margin-bottom: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 1100px;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+i{
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.icon-button {
+	width: 100px;
+}

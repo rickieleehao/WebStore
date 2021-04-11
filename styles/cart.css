@@ -1,0 +1,81 @@
+.totalsummary{
+    min-width: 1200px;
+    margin-top: 40px;
+    display: flex;
+    padding: var(--spacing);
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+}
+
+.totalsummary hr {
+    margin: auto;
+    width: 90%;
+}
+
+.cartWrapper{
+    width: 100%;
+}
+
+.summary{
+    max-width: 400px;
+    width: 400px;
+    text-align: center;
+}
+
+.summary .summaryWrapper{
+    width: 400px;
+    border: 1px solid black;
+    padding: 50px 0px 50px 0px;
+}
+
+.summary .summaryWrapper h1{
+    margin: 20px 0px 20px 0px;
+}
+
+.summary .summaryWrapper p{
+    font-size: 24px;
+}
+
+.summary .summaryWrapper button{
+    height: 50px;
+    margin: 20px 0 10px 0;
+    width: 70%;
+    color: white;
+    background-color: var(--black);
+    border-radius: 30px;
+    font-size: var(--small);
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card .left{
+    flex-shrink: 1;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.card .right{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.card .right .item_name {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.card img{
+    margin-left: 30px;
+    width: 250px;
+    height: 300px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}

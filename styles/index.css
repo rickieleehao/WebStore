@@ -1,0 +1,144 @@
+/* common settings */
+.mainImg li,
+.mainImg a,
+.featuredFootwear li,
+.featuredFootwear a {
+    text-decoration: none;
+    color: var(--black);
+    list-style: none;
+}
+
+body {
+    --mainImg-load-time: 1s;
+}
+
+/* mainImg */
+.mainImg {
+    padding: var(--spacing);
+    padding-bottom: 10px;
+}
+
+.category-gender,
+.category-gender-end {
+    width: 10%;
+}
+
+.mainImg_category {
+    font-size: var(--small);
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainImg_imgWrapper {
+    position: relative;
+    animation: landing var(--mainImg-load-time) ease-out;
+}
+
+.mainImg_img {
+    width: 100%;
+    height: 450px;
+    background-image: url(../img/Shopping_Page_Men2.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+@keyframes landing {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.mainImg_imgWrapper a {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    transition: ease-in 0.2s;
+}
+
+.mainImg_imgWrapper a:hover {
+    background-color: var(--yellow);
+    transition: ease-in 0.2s;
+}
+
+/* featuredFootwear */
+.featuredFootwear {
+    padding: var(--spacing);
+}
+
+.carouselWrapper {
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.carousel {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carousel .card {
+    width: 350px;
+    margin: 10px 40px 10px 40px;
+    height: 500px;
+}
+
+.carousel a {
+    flex: 1 1 0;
+    align-self: center;
+    text-align: center;
+}
+
+.carousel img {
+    position: relative;
+    background: lightcyan;
+    line-height: 250px;
+    width: 350px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: ease-in 0.2s;
+    /* margin: 0px 5px 0px 5px; */
+    height: 400px;
+}
+
+.carousel .card:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translate(-5px, -5px);
+    transition: ease-in 0.2s;
+}
+
+.carousel .cardDesc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.carousel .cardDesc .name {
+    flex: 2;
+    height: 80px;
+    text-align: left;
+}
+
+.carousel .cardDesc .cardPrice {
+    flex: 1;
+    text-align: right;
+    margin-right: 5px;
+}

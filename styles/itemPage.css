@@ -1,0 +1,121 @@
+:root {
+    --smaller: 14px;
+    --small: 16px;
+    --medium: 20px;
+    --large: 24px;
+    /* color */
+    --yellow: #FEF093;
+    --black: #27231F;
+    --grey: #E2E2E2;
+    /* side spacing in px */
+    --spacing: 0 38px 0 36px;
+}
+
+/* itemWrapper */
+.itemWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing);
+    padding-top: 30px;
+}
+
+.itemImg {
+    flex: 3;
+}
+
+.itemImg div {
+    text-align: center;
+}
+
+.itemDets {
+    flex: 2;
+}
+
+.Img {
+    width: 300px;
+    height: 400px;
+    margin: 5px;
+}
+
+/* itemDets */
+.itemDets {
+    padding-top: 20px;
+}
+
+.itemDetsWrapper{
+    position: relative;
+    width: 80%;
+}
+
+.category {
+    font-size: var(--medium);
+    margin-bottom: 15px;
+}
+
+.name {
+    margin-bottom: 30px;
+    font-size: var(--large);
+    font-weight: bold;
+}
+
+.size {
+    margin-bottom: 15px;
+    font-size: var(--small);
+}
+
+.price {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: var(--small);
+}
+
+.sizePicker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sizePicker label{
+    margin-right: 10px;
+}
+
+.addCart {
+    text-align: center;
+    width: 80%;
+}
+
+.addCart form{
+    width: 100%;
+    position: relative;
+    height: 130px;
+}
+
+.addCart button[type='submit'] {
+    position: relative;
+    height: 50px;
+    margin: 20px 0 10px 0;
+    width: 100%;
+    color: white;
+    background-color: var(--black);
+    border-radius: 30px;
+    font-size: var(--small);
+}
+
+.itemDets :is(.itemDecs, .itemColors) {
+    font-size: var(--small);
+}
+
+.itemDesc, .itemColors{
+    width: 80%;
+    padding: 10px 0 10px 0;
+    text-align: justify;
+    font-style: italic;
+}
+
+.returnPolicy{
+    width: 80%;
+    font-size: 10px;
+    font-style: italic;
+}

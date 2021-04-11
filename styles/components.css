@@ -1,0 +1,238 @@
+:root {
+    --smaller: 14px;
+    --small: 16px;
+    --medium: 20px;
+    --large: 24px;
+    /* color */
+    --yellow: #FEF093;
+    --black: #27231F;
+    --grey: #E2E2E2;
+    --blue: #4CD7D0;
+    --pink: #FECCC8;
+    /* side spacing in px */
+    --spacing: 0 38px 0 36px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+
+/* common settings*/
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 700px;
+    min-height: 100%;
+}
+
+nav,
+.topheader,
+.header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+div {
+    display: block;
+}
+
+.topheader li,
+.topheader a,
+.headerWrapper li,
+.headerWrapper a {
+    text-decoration: none;
+    color: var(--black);
+    list-style: none;
+}
+
+/* topheader */
+.topheader {
+    height: 35px;
+    width: 100%;
+    background-color: var(--grey);
+    font-size: var(--smaller);
+    position: relative;
+}
+
+.topheader ul {
+    position: absolute;
+    padding-right: 20px;
+    top: 50%;
+    right: 0%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.topheader li,
+span {
+    display: inline;
+    padding-right: 4px;
+}
+
+/* wrapper for the header nav */
+.header {
+    padding: var(--spacing);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+    width: 60px;
+}
+
+#cart {
+    height: 40px;
+    width: 40px;
+}
+
+.header li {
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+
+/* btmheader sideSide navContainer */
+#navLogo {
+    height: 20px;
+    width: 20px;
+}
+
+.btmheader {
+    height: 35px;
+    width: 100%;
+    position: relative;
+}
+
+.default{
+    background-color: var(--yellow);
+}
+
+.M{
+    background-color: var(--blue);
+}
+
+.F{
+    background-color: var(--pink);
+}
+
+.dropDown {
+    margin: 7px 0px 0px 55px;
+    display: inline-block;
+}
+
+.dropDown ul {
+    list-style: none;
+}
+
+.dropDown ul li.sideMenu ul {
+    position: absolute;
+    top: 34px;
+    width: 150px;
+    height: fit-content;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropDown ul li.sideMenu:hover ul {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dropDown .sideMenu{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.dropDown ul ul li {
+    display: inline;
+    padding: 5px 0px 5px 0px;
+    text-align: left;
+}
+
+.dropDown ul li.sideMenu li {
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.sideMenu img{
+    cursor: pointer;
+}
+
+.sideMenu ul {
+    overflow: hidden;
+}
+
+.dropDown ul li.sideMenu a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.sideMenu li:hover {
+    background-color: lightyellow;
+    color: red;
+}
+
+/* footer */
+.footerWrapper {
+    position: relative;
+    margin-top: auto;
+    height: 30px;
+    width: 100%;
+    background-color: var(--black);
+    color: white;
+}
+
+.footer {
+    padding: var(--spacing);
+    font-size: var(--smaller);
+    padding-top: 10px;
+    position: relative;
+}
+
+.footer p {
+    position: absolute;
+    top: 50%;
+}
+/* adminNav */
+.adminNav {
+	height: 35px;
+    width: 100%;
+    position: relative;
+	background-color: var(--yellow);
+	color: black;
+	text-align: right;
+}
+
+.adminNav a{
+	position: absolute;
+	right: 40px;
+	top: 6px;
+	width: 100px;
+	text-align: center;
+}
+
+.adminNav a:hover{
+	background-color: lightyellow;
+}
