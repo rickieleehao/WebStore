@@ -75,8 +75,7 @@
             <div id="source">
                 <ul>
                     <li class="sources animateHidden">
-                        <a
-                            href="https://www.dmodot.com/blogs/shblog/here-are-5-ways-to-take-care-of-your-shoes-during-the-lockdown-right-from-the-comfort-of-your-home">10
+                        <a href="https://www.dmodot.com/blogs/shblog/here-are-5-ways-to-take-care-of-your-shoes-during-the-lockdown-right-from-the-comfort-of-your-home">10
                             Ways to Take Care of your Shoes - dmodot</a>
                     </li>
                     <li class="sources animateHidden">
@@ -99,4 +98,4 @@
 </body>
 
 </html>
-<script src="./json/blog.js"></script>
+<script src="./js/blog.js"></script>

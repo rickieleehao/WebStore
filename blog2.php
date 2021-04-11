@@ -37,8 +37,7 @@
             <div class="blog-section">
                 <p>One of the oldest known shoes are sandals, made from sagebrush bark that dates back to 7000 BC. </p>
                 <div class="blog-crop">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Chalcolithic_leather_shoe_from_Areni-1_cave.jpg"
-                        alt="Armenia Leather Shoe from 3300 BCE"></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Chalcolithic_leather_shoe_from_Areni-1_cave.jpg" alt="Armenia Leather Shoe from 3300 BCE"></img>
                     <p class="blog-caption">The shoe, as pictured above, is thought to date back around 3300 BCE.</p>
                 </div>
                 <p>The oldest known leather shoe, made from cowhide and laced with leather, was found in Armenia in
@@ -55,8 +54,7 @@
                 <p>It wasn't until the Ancient Roman era that footwear became prevalent. The Roman regarded footwears as
                     a necessity of living in a civilised world. </p>
                 <div class="blog-crop">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Romanwallinscotl00macduoft_raw_0263.png"
-                        alt="Shoes from Bar Hill on the Antonine Wall"></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Romanwallinscotl00macduoft_raw_0263.png" alt="Shoes from Bar Hill on the Antonine Wall"></img>
                     <p class="blog-caption">Pictured above (from left to right) are shoes for Roman men, women and
                         children.</p>
                 </div>
@@ -64,8 +62,7 @@
             <h3>Middle Ages</h3>
             <div class="blog-section">
                 <div class="blog-crop">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/TurnShoe.JPG"
-                        alt="Turnshoe replica"></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/TurnShoe.JPG" alt="Turnshoe replica"></img>
                     <p class="blog-caption">Pictured above is a replica of a turnshoe.</p>
                 </div>
                 <p>he Middle Ages sees shoes made using the turnshoe method. The turnshoe was named this way because it
@@ -75,8 +72,7 @@
                     shoes to the sole. However, shoes made this way were not tuned to each foot and are known as
                     "straights".</p>
                 <div class="blog-crop">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Jan_van_Eyck_004.jpg"
-                        alt="Crop of the painting The Arnolfini Portrait"></img>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Jan_van_Eyck_004.jpg" alt="Crop of the painting The Arnolfini Portrait"></img>
                     <p class="blog-caption">Patten are the precursors to high heels.</p>
                 </div>
                 <p>Pattens, during this era, became popular amongst Europeans. Their designs were the precursor for
@@ -127,4 +123,4 @@
 </body>
 
 </html>
-<script src="./json/blog.js"></script>
+<script src="./js/blog.js"></script>

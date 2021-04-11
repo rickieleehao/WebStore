@@ -1,10 +1,9 @@
-<?php include 'logindata.php';?>
+<?php include 'logindata.php'; ?>
 <link rel="stylesheet" href="./styles/login.css">
 <div id="ID" class="login">
     <form class="login-content animate" action="login.php" method="POST">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('ID').style.display='none'" class="close"
-                title="Close Login">&times;</span>
+            <span onclick="document.getElementById('ID').style.display='none'" class="close" title="Close Login">&times;</span>
             <img src="./img/web_iconMain.png" alt="Avatar" class="avatar" style="width:150px;height:150px;">
         </div>
 
@@ -21,4 +20,4 @@
     </form>
 </div>
 </section>
-<script src="./json/login.js"></script>
+<script src="./js/login.js"></script>

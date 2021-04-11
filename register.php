@@ -8,8 +8,7 @@
 </head>
 
 <body>
-  <iframe name="dummyframe" id="dummyframe" title="VGhhbmtzIGZvciBiZWluZyBhIGZ1Y2tpbmcgcGFpbiBpbiB0aGUgYXNzLg=="
-    style="display: none;"></iframe>
+  <iframe name="dummyframe" id="dummyframe" title="VGhhbmtzIGZvciBiZWluZyBhIGZ1Y2tpbmcgcGFpbiBpbiB0aGUgYXNzLg==" style="display: none;"></iframe>
 
   <?php include "./component/header.php"; ?>
   <?php include "./component/navigator.php"; ?>
@@ -24,8 +23,7 @@
     </div>
     <div class="register-container" id="register-email-error">
       <label>Email</label>
-      <input id="register-email" onclick="promptError(false, 'register-email-error');" type="email" name="email"
-        required>
+      <input id="register-email" onclick="promptError(false, 'register-email-error');" type="email" name="email" required>
       <span style="display: none">Email has been registered before!</span>
     </div>
     <div class="register-container">
@@ -34,14 +32,12 @@
     </div>
     <div class="register-container" id="register-password1-error">
       <label>Password</label>
-      <input id="register-password1" onclick="promptError(false, 'register-password1-error');" type="password"
-        name="password" autocomplete="new-password" maxlength="72" required>
+      <input id="register-password1" onclick="promptError(false, 'register-password1-error');" type="password" name="password" autocomplete="new-password" maxlength="72" required>
       <span style="display: none">Password does not match!</span>
     </div>
     <div class="register-container" id="register-password2-error">
       <label>Retype Password</label>
-      <input id="register-password2" onclick="promptError(false, 'register-password2-error');" type="password"
-        name="retype-password" autocomplete="new-password" maxlength="72" required>
+      <input id="register-password2" onclick="promptError(false, 'register-password2-error');" type="password" name="retype-password" autocomplete="new-password" maxlength="72" required>
       <span style="display: none">Password does not match!</span>
     </div>
     <div class="register-dropdown">
@@ -65,4 +61,4 @@
 </body>
 
 </html>
-<script src="./json/register.js"></script>
+<script src="./js/register.js"></script>

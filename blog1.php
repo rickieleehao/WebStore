@@ -92,4 +92,4 @@
 </body>
 
 </html>
-<script src="./json/blog.js"></script>
+<script src="./js/blog.js"></script>
