@@ -16,7 +16,9 @@ function loginUser($conn,$email,$password){
 
         $row = mysqli_fetch_assoc($sql);
 
-        $passVAL = ($password == $row["password"]);
+        $hash = $row["password"];
+       
+        $passVAL = password_verify($password,$hash);
         
         if ($passVAL){
             session_start();
@@ -35,8 +37,8 @@ function loginUser($conn,$email,$password){
             
         }
         else if (!$passVAL){
-            echo '<div class="fail">Login failed,please try again</div>';
-            header("Refresh:2; url=index.php");
+            echo "<script type='text/javascript'> alert('Invalid login! Please try again!')</script>";
+            header("Refresh:0; url=index.php");
         }
         mysqli_free_result($sql);
     }

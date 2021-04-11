@@ -20,7 +20,6 @@
 }
 
 .itemImg {
-    /* padding: 0 20px 0 20px; */
     flex: 3;
 }
 
@@ -69,33 +68,20 @@
     top: 20px;
     right: 0;
     font-size: var(--small);
-    /* padding-right: 85px; */
 }
 
-.sizeOption {
-    /* display: flex;
-    justify-content: space-between;*/
-    text-align: center;
-    width: 80%;
-    /* height: 120px; */
-    height: auto;
+.sizePicker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.sizeOption button {
-    margin: 2px;
-    width: 120px;
-    min-height: 50px;
-    border-radius: 3px;
-    border-width: 0px;
-}
-
-.sizeOption button:focus{
-    background-color: black;
-    color: white;
+.sizePicker label{
+    margin-right: 10px;
 }
 
 .addCart {
-    /* display: inline; */
     text-align: center;
     width: 80%;
 }
@@ -103,12 +89,11 @@
 .addCart form{
     width: 100%;
     position: relative;
-    height: 100px;
+    height: 130px;
 }
 
 .addCart button[type='submit'] {
-    position: absolute;
-    left: 0px;
+    position: relative;
     height: 50px;
     margin: 20px 0 10px 0;
     width: 100%;
@@ -134,5 +119,3 @@
     font-size: 10px;
     font-style: italic;
 }
-
-/* remark create contrainer for some div. for width */

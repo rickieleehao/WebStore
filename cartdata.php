@@ -17,22 +17,29 @@ if(isset($_GET['action'])){
 }
 
 if(isset($_POST['addcart'])&&isset($_SESSION['loggedin'])){
+    if(!isset($_POST['size'])){
+        echo '<script type="text/javascript"> alert("You need to pick a shoes size.") </script>';
+        header("refresh:0; url=shopping.php?category=All&sub=");
+    }else{
     if(isset($_SESSION['cart'])){
         $count = count($_SESSION['cart']);
         $item_array = array (
             'item_id' => $_POST['item_id'],
             'item_name' => $_POST['item_name'],
-            'item_price' => $_POST['item_price']
+            'item_price' => $_POST['item_price'],
+            'item_size' => $_POST['size']
         );
         $_SESSION['cart'][$count] = $item_array;
     }else{
         $item_array = array (
             'item_id' => $_POST['item_id'],
             'item_name' => $_POST['item_name'],
-            'item_price' => $_POST['item_price']
+            'item_price' => $_POST['item_price'],
+            'item_size' => $_POST['size']
         );
         $_SESSION['cart'][0] = $item_array;
     }
+}
 }
 
 $num = 1;
@@ -47,6 +54,7 @@ if(isset($_SESSION['cart'])){
             echo "<div class='card right'>";
             echo "<h1>".$value['item_name']."</h1>";
             echo "<p class='price'>RM ".$value['item_price']."</p>";
+            echo "<p class='price'>Size ".$value['item_size']."</p>";
             echo "<a href='cart.php?action=delete&id=".$value['item_id']."'>Remove</a>";
             echo "</div>";
             echo "</div>";

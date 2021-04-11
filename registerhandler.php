@@ -28,6 +28,8 @@ if (isset($_POST['register'])) {
         session_start();
         $_SESSION["email"] = $_POST["email"];
         $_SESSION["name"] = $_POST["name"];
+        $_SESSION["gender"] = $_POST['gender'];
+        $_SESSION["loggedin"] = true;
         echo "";
         setcookie("result", "2", time() + 10, "/");
     }

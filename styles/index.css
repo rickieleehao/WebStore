@@ -1,6 +1,6 @@
 /* common settings */
-.mainAd li,
-.mainAd a,
+.mainImg li,
+.mainImg a,
 .featuredFootwear li,
 .featuredFootwear a {
     text-decoration: none;
@@ -9,11 +9,11 @@
 }
 
 body {
-    --mainAd-load-time: 1s;
+    --mainImg-load-time: 1s;
 }
 
-/* mainAd */
-.mainAd {
+/* mainImg */
+.mainImg {
     padding: var(--spacing);
     padding-bottom: 10px;
 }
@@ -23,19 +23,19 @@ body {
     width: 10%;
 }
 
-.mainAd_category {
+.mainImg_category {
     font-size: var(--small);
     padding: 10px 0 10px 0;
     display: flex;
     justify-content: space-between;
 }
 
-.mainAd_imgWrapper {
+.mainImg_imgWrapper {
     position: relative;
-    animation: landing var(--mainAd-load-time) ease-out;
+    animation: landing var(--mainImg-load-time) ease-out;
 }
 
-.mainAd_img {
+.mainImg_img {
     width: 100%;
     height: 450px;
     background-image: url(../img/Shopping_Page_Men2.png);
@@ -58,7 +58,7 @@ body {
     }
 }
 
-.mainAd_imgWrapper a {
+.mainImg_imgWrapper a {
     position: absolute;
     bottom: 15px;
     left: 10px;
@@ -71,7 +71,7 @@ body {
     transition: ease-in 0.2s;
 }
 
-.mainAd_imgWrapper a:hover {
+.mainImg_imgWrapper a:hover {
     background-color: var(--yellow);
     transition: ease-in 0.2s;
 }

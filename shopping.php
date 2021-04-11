@@ -29,19 +29,19 @@
                         <li class="btn">Kids</li>
                     </a>
                     <label>Sub-Category</lable>
-                        <a href="shopping.php?category=All&sub=lifestyle">
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&sub=lifestyle">
                             <li class="btn">Lifestyle</li>
                         </a>
-                        <a href="shopping.php?category=Men&sub=jordan">
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&sub=jordan">
                             <li class="btn">Jordan</li>
                         </a>
-                        <a href="shopping.php?category=Women&sub=running">
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&sub=running">
                             <li class="btn">Running</li>
                         </a>
-                        <a href="shopping.php?category=Kids&sub=basketball">
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&sub=basketball">
                             <li class="btn">Basketball</li>
                         </a>
-                        <a href="shopping.php?category=Kids&sub=football">
+                        <a href="shopping.php?category=<?php echo $_GET['category']?>&sub=football">
                             <li class="btn">Football</li>
                         </a>
                         <label>Price</lable>

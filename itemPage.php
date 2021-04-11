@@ -54,18 +54,22 @@ mysqli_close($conn);
                     <p class="size">Select Size</p>
                     <p class="price">RM <?php echo $price?></p>
                 </div>
-                <div class="sizeOption">
-                    <div>
-                        <button>US 7</button>
-                        <button>US 8</button>
-                        <button>US 9</button>
-                        <button>US 10</button>
-                        <button>US 11</button>
-                        <button>US 12</button>
-                    </div>
-                </div>
                 <div class="addCart">
                     <form action="cart.php" method="POST">
+                        <div class="sizePicker">
+                            <div><input type="radio" name="size" value="US 7">
+                                <label>US 7</label></div>
+                            <div><input type="radio" name="size" value="US 8">
+                                <label>US 8</label></div>
+                            <div><input type="radio" name="size" value="US 9">
+                                <label>US 9</label></div>
+                            <div><input type="radio" name="size" value="US 10">
+                                <label>US 10</label></div>
+                            <div><input type="radio" name="size" value="US 11">
+                                <label>US 11</label></div>
+                            <div><input type="radio" name="size" value="US 12">
+                                <label>US 12</label></div>
+                        </div>
                         <input type="hidden" name="item_id" value="<?php echo $id?>">
                         <input type="hidden" name="item_name" value="<?php echo $name?>">
                         <input type="hidden" name="item_price" value="<?php echo $price?>">

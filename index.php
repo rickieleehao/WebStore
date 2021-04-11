@@ -17,13 +17,13 @@
     <?php include "./component/header.php"; ?>
     <?php include "./component/navigator.php"; ?>
 
-    <div class="mainAd">
-        <div class="mainAd_category">
+    <div class="mainImg">
+        <div class="mainImg_category">
             <p id="category-gender"><?php echo $gender_word?></p>
             <p id="category-gender-end"></p>
         </div>
-        <div class="mainAd_imgWrapper">
-            <img class="mainAd_img">
+        <div class="mainImg_imgWrapper">
+            <img class="mainImg_img">
             <div>
                 <a href="shopping.php?category=All&sub=">Shop</a>
             </div>
