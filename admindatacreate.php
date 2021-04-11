@@ -13,8 +13,9 @@ if (isset($_POST['id'])) {
     $C_description = $_POST['c_description'];
     $P_description = $_POST['p_description'];
 
-    $sql = $conn->prepare("INSERT INTO shoes_data (id, name, category, sub_category, price, year, promotion_rate, color_description, product_description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $sql->bind_param("ssssdidss", $id, $name, $category, $sub, $price, $year, $p_rate, $C_description, $P_description);
+    $sql = $conn->prepare("INSERT INTO `shoes_data` (`id`, `category`, `sub_category`, `name`, `price`, `promotion_rate`, `color_description`, `product_description`, `year`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $sql->bind_param("ssssdidss", $id, $category, $sub, $name, $price, $p_rate, $C_description, $P_description,$year);
+    
     if ($sql->execute()) {
         echo '<script type="text/javascript"> alert("Shoe data created") </script>';
     } else {
