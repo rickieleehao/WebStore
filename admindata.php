@@ -1,7 +1,6 @@
 <?php
 
 include_once "configdb.php";
-$option = 0;
 
 if (!isset($_GET['filter'])) {
     if (isset($_GET['category'])) {
