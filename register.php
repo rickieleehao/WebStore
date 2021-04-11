@@ -65,4 +65,4 @@
 </body>
 
 </html>
-<script src="register.js"></script>
+<script src="./json/register.js"></script>

@@ -21,4 +21,4 @@
     </form>
 </div>
 </section>
-<script src="login.js"></script>
+<script src="./json/login.js"></script>

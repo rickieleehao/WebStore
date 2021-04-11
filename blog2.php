@@ -127,4 +127,4 @@
 </body>
 
 </html>
-<script src="blog.js"></script>
+<script src="./json/blog.js"></script>
