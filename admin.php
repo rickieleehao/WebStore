@@ -20,17 +20,20 @@
     <?php include "./component/navigator.php"; ?>
 
     <div class="button_grp">
+        <label>Category</label>
         <ul class="nobullet">
-            <label>Category</label>
-            <a href="admin.php?filter=product"><li class="button">Product</li></a>
-            <a href="admin.php?filter=FAQ"><li class="button">FAQ</li></a>
+            <a href="admin.php?filter=product">
+                <li class="button">Product</li>
+            </a>
+            <a href="admin.php?filter=FAQ">
+                <li class="button">FAQ</li>
+            </a>
         </ul>
     </div>
     <div class="content">
         <nav>
             <?php include "admindata.php"; ?>
         </nav>
-
     </div>
 </body>
 

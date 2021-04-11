@@ -4,48 +4,47 @@
 </body>
 <?php
 
-$conn = mysqli_connect('localhost','root','','data');
+$conn = mysqli_connect('localhost', 'root', '', 'data');
 $option = 0;
 
 
-if(!isset($_GET['filter'])){
-    if (isset($_GET['category'])){
+if (!isset($_GET['filter'])) {
+    if (isset($_GET['category'])) {
         $category = $_GET['category'];
-        if ($category == "product" ) {
+        if ($category == "product") {
             $option = 1; //edit page for product
-        }else if ($category == "FAQ"){
-           $option = 4; //edit page for faq
-        }else if ($category == "newFAQ"){
+        } else if ($category == "FAQ") {
+            $option = 4; //edit page for faq
+        } else if ($category == "newFAQ") {
             $option = 5;
-        }else if ($category == "newproduct"){
+        } else if ($category == "newproduct") {
             $option = 6;
         }
+    } else {
+        $option = 2; //default page for product
     }
-    else{
-        $option = 2;//default page for product
-    }
-}else if (isset($_GET['filter'])){
+} else if (isset($_GET['filter'])) {
     $filter = $_GET['filter'];
 
-    if ($filter == "product"){
+    if ($filter == "product") {
         $option = 2; //default page for product
-    }else if($filter == "FAQ"){
+    } else if ($filter == "FAQ") {
         $option = 3; //default page for faq
     }
-} 
+}
 
 
 
-if ($option == 1){
+if ($option == 1) {
     $category = $_GET['category'];
     $id = $_GET['id'];
 
     $query = "SELECT * FROM shoes_data WHERE id = '$id'";
 
-    
-    if ($result = mysqli_query($conn,$query)){
-        while($obj = mysqli_fetch_object($result)){
-            echo<<<HTML
+
+    if ($result = mysqli_query($conn, $query)) {
+        while ($obj = mysqli_fetch_object($result)) {
+            echo <<<HTML
                 <form action="admindataedit.php" method="POST">
                     <div class="container">
                         <label>Product ID: $obj->id </label>
@@ -100,9 +99,10 @@ if ($option == 1){
             HTML;
         }
     }
-}else if ($option == 2){
+} else if ($option == 2) {
     $query = "SELECT * FROM shoes_data";
-    echo<<<HTML
+    echo "<a href=admin.php?category=newproduct><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
+    echo <<<HTML
         <table>
         <tr>
             <th>SHOE ID</th>
@@ -112,9 +112,9 @@ if ($option == 1){
             <th>DELETE</th>
         </tr>
         HTML;
-    if ($result = mysqli_query($conn,$query)){
-        while($obj = mysqli_fetch_object($result)){
-           echo<<<HTML
+    if ($result = mysqli_query($conn, $query)) {
+        while ($obj = mysqli_fetch_object($result)) {
+            echo <<<HTML
             <tr>
                 <td>$obj->id</td>
                 <td>$obj->category</td>
@@ -125,20 +125,22 @@ if ($option == 1){
             HTML;
         }
     }
-    echo "</table>";  
-    echo "<a  href=admin.php?category=newproduct><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
-}else if ($option == 3){
+    echo "</table>";
+} else if ($option == 3) {
     $query = "SELECT * FROM faq";
-    echo<<<HTML
+    echo "<a href=admin.php?category=newFAQ><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
+    echo <<<HTML
         <table>
         <tr>
             <th>FAQ ID</th>
             <th>QUESTION</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
         HTML;
-        if ($result = mysqli_query($conn,$query)){
-        while($obj = mysqli_fetch_object($result)){
-            echo<<<HTML
+    if ($result = mysqli_query($conn, $query)) {
+        while ($obj = mysqli_fetch_object($result)) {
+            echo <<<HTML
             <tr>
                 <td>$obj->fid</td>
                 <td>$obj->question</td>
@@ -148,17 +150,16 @@ if ($option == 1){
             HTML;
         }
     }
-    echo "</table>";  
-    echo "<a href=admin.php?category=newFAQ><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
-}else if ($option == 4){
+    echo "</table>";
+} else if ($option == 4) {
     $fid = $_GET['fid'];
 
     $query = "SELECT * FROM faq WHERE fid = '$fid'";
 
-    
-    if ($result = mysqli_query($conn,$query)){
-        while($obj = mysqli_fetch_object($result)){
-            echo<<<HTML
+
+    if ($result = mysqli_query($conn, $query)) {
+        while ($obj = mysqli_fetch_object($result)) {
+            echo <<<HTML
                 <form action="admindataedit.php" method="POST">
                     <input type="hidden" value="$obj->fid" name="fid">
                     <div class="container">
@@ -176,8 +177,8 @@ if ($option == 1){
             HTML;
         }
     }
-}else if ($option == 5){
-    echo<<<HTML
+} else if ($option == 5) {
+    echo <<<HTML
     <form action='admindatacreate.php' method="POST">
         <input type="hidden" name="fid">
         <div class="container">
@@ -193,12 +194,40 @@ if ($option == 1){
         </div>
     </form>
     HTML;
-}else if ($option == 6){
-    echo<<<HTML
+} else if ($option == 6) {
+
+    $query = "SELECT id FROM shoes_data";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $counter = 1;
+
+        while ($obj = $result->fetch_object()) {
+            if (strstr($obj->id, strval($counter))) {
+                $counter++;
+            } else {
+                break;
+            }
+        }
+
+        $counter = strval($counter);
+
+        if (strlen($counter) == 1) {
+            $counter = "00" . $counter;
+        } else if (strlen($counter) == 2) {
+            $counter = "0" . $counter;
+        }
+
+        $id = "S" . $counter;
+    } else {
+        $id = "S001";
+    }
+
+    echo <<<HTML
                 <form action="admindatacreate.php" method="POST">
                     <div class="container">
                         <label>Product ID: </label><br>
-                        <input type="text" name="id">
+                        <input type="text" name="id" value="$id" readonly>
                     </div>
                     <div class="container">
                         <label>Name</label><br>
