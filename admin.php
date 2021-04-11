@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!isset($_SESSION['type'])||$_SESSION['type']!="Admin"){
+    echo '<script type="text/javascript"> alert("Only allow administrators to access this page.") </script>';
+    header("refresh:0; url=index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

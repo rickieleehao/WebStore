@@ -295,7 +295,7 @@ function addProduct($conn)
                         <textarea name="p_description" class="big"></textarea>
                     </div>
                     <div class="container btn">
-                    <button type="submit" name="submit" class="button">Update</button>
+                    <button type="submit" name="submit" class="button">Create</button>
                     </div>
                 </form>
             HTML;

@@ -87,7 +87,7 @@ mysqli_close($conn);
 
                 <p class="itemColors">- <?php echo $colorDesc ?></p>
                 <br><br><br><br>
-                <p class="returnPolicy">No return allowed on any Final Sale items, except for flaws in workmanship (as long as the hang tag has not been removed.</p>
+                <p class="returnPolicy">No return allowed on any Final Sale items, except for flaws in workmanship (as long as the hang tag has not been removed)</p>
 
             </div>
         </div>

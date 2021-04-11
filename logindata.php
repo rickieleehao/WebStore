@@ -26,6 +26,7 @@ function loginUser($conn,$email,$password){
             $_SESSION["email"] = $row["email"];
             $_SESSION["name"] = $row["name"];
             $_SESSION["gender"] = $row["gender"];
+            $_SESSION["type"] = $row["type"];
             $_SESSION["loggedin"] = true;
 
             if($row["type"] == "Admin"){
