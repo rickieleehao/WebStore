@@ -27,9 +27,6 @@ if (!isset($_GET['filter'])) {
     }
 }
 
-if ($option == 1) {
-    $category = $_GET['category'];
-
 function editProduct($conn)
 {
     $id = $_GET['id'];
@@ -304,4 +301,3 @@ function addProduct($conn)
             HTML;
 }
 mysqli_close($conn);
-?>
