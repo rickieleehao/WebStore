@@ -1,48 +1,45 @@
 <?php
-
 include_once "configdb.php";
 
-if (!isset($_GET['filter'])) {
-    if (isset($_GET['category'])) {
+if(!isset($_GET['filter'])){
+    if (isset($_GET['category'])){
         $category = $_GET['category'];
-        if ($category == "product") {
-            editProduct($conn);
-        } else if ($category == "FAQ") {
-            editFAQ($conn);
-        } else if ($category == "newFAQ") {
-            addFAQ();
-        } else if ($category == "newproduct") {
-            addProduct($conn);
+        if ($category == "product" ) {
+            $option = 1; //edit page for product
+        }else if ($category == "FAQ"){
+           $option = 4; //edit page for faq
+        }else if ($category == "newFAQ"){
+            $option = 5;
+        }else if ($category == "newproduct"){
+            $option = 6;
         }
-    } else {
-        defaultProduct($conn);
     }
-} else if (isset($_GET['filter'])) {
+    else{
+        $option = 2;//default page for product
+    }
+}else if (isset($_GET['filter'])){
     $filter = $_GET['filter'];
 
-    if ($filter == "product") {
-        defaultProduct($conn);
-    } else if ($filter == "FAQ") {
-        defaultFAQ($conn);
+    if ($filter == "product"){
+        $option = 2; //default page for product
+    }else if($filter == "FAQ"){
+        $option = 3; //default page for faq
     }
-}
+} 
 
-if ($option == 1) {
+if ($option == 1){
     $category = $_GET['category'];
-
-function editProduct($conn)
-{
     $id = $_GET['id'];
 
     $query = "SELECT * FROM shoes_data WHERE id = '$id'";
 
-    if ($result = mysqli_query($conn, $query)) {
-        while ($obj = mysqli_fetch_object($result)) {
-            echo <<<HTML
+    if ($result = mysqli_query($conn,$query)){
+        while($obj = mysqli_fetch_object($result)){
+            echo<<<HTML
                 <form action="admindataedit.php" method="POST">
                     <div class="container">
-                        <label>Product ID:</label><br>
-                        <input type="text" name="id" value="$obj->id" readonly>
+                        <label>Product ID: $obj->id </label>
+                        <input type="hidden" value="$obj->id" name="id">
                     </div>
                     <div class="container">
                         <label>Name</label><br>
@@ -67,7 +64,7 @@ function editProduct($conn)
                     </div>
                     
                     <div class="container">
-                        <label>Price (RM)</label><br>
+                        <label>Price(RM)</label><br>
                         <input type="number" value = "$obj->price" name="price">
                     </div>
                     <div class="container">
@@ -93,18 +90,64 @@ function editProduct($conn)
             HTML;
         }
     }
-}
-
-function editFAQ($conn)
-{
+}else if ($option == 2){
+    $query = "SELECT * FROM shoes_data";
+    echo<<<HTML
+        <table>
+        <tr>
+            <th>SHOE ID</th>
+            <th>CATEGORY</th>
+            <th>NAME</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+        HTML;
+    if ($result = mysqli_query($conn,$query)){
+        while($obj = mysqli_fetch_object($result)){
+           echo<<<HTML
+            <tr>
+                <td>$obj->id</td>
+                <td>$obj->category</td>
+                <td>$obj->name</td>
+                <td><a href=admin.php?category=product&id=$obj->id><i class="fas fa-edit"></i></a></td>
+                <td><a href=admindatadelete.php?category=product&id=$obj->id><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+            HTML;
+        }
+    }
+    echo "</table>";  
+    echo "<a  href=admin.php?category=newproduct><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
+}else if ($option == 3){
+    $query = "SELECT * FROM faq";
+    echo<<<HTML
+        <table>
+        <tr>
+            <th>FAQ ID</th>
+            <th>QUESTION</th>
+        </tr>
+        HTML;
+        if ($result = mysqli_query($conn,$query)){
+        while($obj = mysqli_fetch_object($result)){
+            echo<<<HTML
+            <tr>
+                <td>$obj->fid</td>
+                <td>$obj->question</td>
+                <td><a href=admin.php?category=FAQ&fid=$obj->fid><i class="fas fa-edit"></i></a></td>
+                <td><a href=admindatadelete.php?category=FAQ&fid=$obj->fid><i class="fas fa-trash-alt"></i></a></td>
+            <tr>
+            HTML;
+        }
+    }
+    echo "</table>";  
+    echo "<a href=admin.php?category=newFAQ><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
+}else if ($option == 4){
     $fid = $_GET['fid'];
 
     $query = "SELECT * FROM faq WHERE fid = '$fid'";
 
-
-    if ($result = mysqli_query($conn, $query)) {
-        while ($obj = mysqli_fetch_object($result)) {
-            echo <<<HTML
+    if ($result = mysqli_query($conn,$query)){
+        while($obj = mysqli_fetch_object($result)){
+            echo<<<HTML
                 <form action="admindataedit.php" method="POST">
                     <input type="hidden" value="$obj->fid" name="fid">
                     <div class="container">
@@ -122,83 +165,8 @@ function editFAQ($conn)
             HTML;
         }
     }
-}
-
-function defaultProduct($conn)
-{
-    $query = "SELECT * FROM shoes_data";
-    echo <<<HTML
-        <a href="admin.php?category=newproduct">
-            <div class="flexbox">
-                <i class='fas fa-plus-circle' style='font-size: 30px'></i>
-                <span>Add New Entry</span>
-            </div>
-        </a>
-    HTML;
-    echo <<<HTML
-        <table>
-        <tr>
-            <th>SHOE ID</th>
-            <th>CATEGORY</th>
-            <th>NAME</th>
-            <th class="icon-button">EDIT</th>
-            <th class="icon-button">DELETE</th>
-        </tr>
-        HTML;
-    if ($result = mysqli_query($conn, $query)) {
-        while ($obj = mysqli_fetch_object($result)) {
-            echo <<<HTML
-            <tr>
-                <td>$obj->id</td>
-                <td>$obj->category</td>
-                <td>$obj->name</td>
-                <td><a href=admin.php?category=product&id=$obj->id><i class="fas fa-edit"></i></a></td>
-                <td><a href=admindatadelete.php?category=product&id=$obj->id><i class="fas fa-trash-alt"></i></a></td>
-            </tr>
-            HTML;
-        }
-    }
-    echo "</table>";
-}
-
-function defaultFAQ($conn)
-{
-    $query = "SELECT * FROM faq";
-    echo <<<HTML
-        <a href="admin.php?category=newFAQ">
-            <div class="flexbox">
-                <i class='fas fa-plus-circle' style='font-size: 30px'></i>
-                <span>Add New Entry</span>
-            </div>
-        </a>
-    HTML;
-    echo <<<HTML
-        <table>
-        <tr>
-            <th>FAQ ID</th>
-            <th>QUESTION</th>
-            <th class="icon-button">EDIT</th>
-            <th class="icon-button">DELETE</th>
-        </tr>
-        HTML;
-    if ($result = mysqli_query($conn, $query)) {
-        while ($obj = mysqli_fetch_object($result)) {
-            echo <<<HTML
-            <tr>
-                <td>$obj->fid</td>
-                <td>$obj->question</td>
-                <td><a href=admin.php?category=FAQ&fid=$obj->fid><i class="fas fa-edit"></i></a></td>
-                <td><a href=admindatadelete.php?category=FAQ&fid=$obj->fid><i class="fas fa-trash-alt"></i></a></td>
-            <tr>
-            HTML;
-        }
-    }
-    echo "</table>";
-}
-
-function addFAQ()
-{
-    echo <<<HTML
+}else if ($option == 5){
+    echo<<<HTML
     <form action='admindatacreate.php' method="POST">
         <input type="hidden" name="fid">
         <div class="container">
@@ -214,45 +182,12 @@ function addFAQ()
         </div>
     </form>
     HTML;
-}
-
-
-
-function addProduct($conn)
-{
-
-    $query = "SELECT id FROM shoes_data";
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        $counter = 1;
-
-        while ($obj = $result->fetch_object()) {
-            if (strstr($obj->id, strval($counter))) {
-                $counter++;
-            } else {
-                break;
-            }
-        }
-
-        $counter = strval($counter);
-
-        if (strlen($counter) == 1) {
-            $counter = "00" . $counter;
-        } else if (strlen($counter) == 2) {
-            $counter = "0" . $counter;
-        }
-
-        $id = "S" . $counter;
-    } else {
-        $id = "S001";
-    }
-
-    echo <<<HTML
+}else if ($option == 6){
+    echo<<<HTML
                 <form action="admindatacreate.php" method="POST">
                     <div class="container">
                         <label>Product ID: </label><br>
-                        <input type="text" name="id" value="$id" readonly>
+                        <input type="text" name="id">
                     </div>
                     <div class="container">
                         <label>Name</label><br>
@@ -278,7 +213,7 @@ function addProduct($conn)
                     </div>
                     
                     <div class="container">
-                        <label>Price (RM)</label><br>
+                        <label>Price(RM)</label><br>
                         <input type="number" name="price">
                     </div>
                     <div class="container">
@@ -303,5 +238,5 @@ function addProduct($conn)
                 </form>
             HTML;
 }
-mysqli_close($conn);
+
 ?>
