@@ -127,7 +127,14 @@ function editFAQ($conn)
 function defaultProduct($conn)
 {
     $query = "SELECT * FROM shoes_data";
-    echo "<a href=admin.php?category=newproduct><div><i class='fas fa-plus-circle' style='font-size: 30px'></i><span>Add New Entry</span></div></a>";
+    echo <<<HTML
+        <a href="admin.php?category=newproduct">
+            <div class="flexbox">
+                <i class='fas fa-plus-circle' style='font-size: 30px'></i>
+                <span>Add New Entry</span>
+            </div>
+        </a>
+    HTML;
     echo <<<HTML
         <table>
         <tr>
@@ -157,7 +164,14 @@ function defaultProduct($conn)
 function defaultFAQ($conn)
 {
     $query = "SELECT * FROM faq";
-    echo "<a href=admin.php?category=newFAQ><div><i class='fas fa-plus-circle' style='font-size:30px'></i><span>Add New Entry</span></div></a>";
+    echo <<<HTML
+        <a href="admin.php?category=newFAQ">
+            <div class="flexbox">
+                <i class='fas fa-plus-circle' style='font-size: 30px'></i>
+                <span>Add New Entry</span>
+            </div>
+        </a>
+    HTML;
     echo <<<HTML
         <table>
         <tr>

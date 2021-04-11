@@ -79,19 +79,10 @@ body {
 	background-color: lightyellow;
 }
 
-.fa-plus-circle {
-	padding-bottom: 20px;
-}
-
 /* admin data */
 
 a, a:visited, a:hover, a:active {
 	color: inherit;
-}
-
-input:read-only {
-	background-color: #E0E0E0;
-	color: #808080;
 }
 
 input[type=text],
@@ -119,6 +110,11 @@ input[type=number]{
 			appearance: textfield;
 }
 
+textarea {
+	width: 500px;
+	resize: none;
+}
+
 input:focus, input:hover, 
 select:focus, select:hover,
 textarea:focus, textarea:hover
@@ -126,10 +122,11 @@ textarea:focus, textarea:hover
 	border: 2px solid #555;
 }
 
-textarea {
-	width: 500px;
-	resize: none;
+input:read-only {
+	background-color: #E0E0E0;
+	color: #808080;
 }
+
 
 .big{
 	height: 150px;
@@ -176,6 +173,14 @@ textarea {
 
 .container .btn{
 	align-content: center;
+}
+
+.flexbox {
+	display: flex;
+}
+
+.fa-plus-circle {
+	margin-bottom: 20px;
 }
 
 table {

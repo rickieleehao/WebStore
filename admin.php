@@ -16,7 +16,7 @@
 <body>
     <?php include "./component/adminheader.php"; ?>
 
-    <div class="content_flexbox">
+    <div>
         <div class="button_grp">
             <label>Category</label>
             <ul class="nobullet">
