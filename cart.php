@@ -17,7 +17,7 @@
     <?php include "./component/header.php"; ?>
     <?php include "./component/navigator.php"; ?>
     <div class="totalsummary">
-    <?php include "cartdata.php"; ?>
+        <?php include "cartdata.php"; ?>
     </div>
     <?php include "./component/footer.php"; ?>
 </body>

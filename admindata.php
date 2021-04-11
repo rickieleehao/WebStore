@@ -1,9 +1,7 @@
-<body>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'data');
+include_once "configdb.php";
+$option = 0;
 
 if (!isset($_GET['filter'])) {
     if (isset($_GET['category'])) {
@@ -29,6 +27,9 @@ if (!isset($_GET['filter'])) {
         defaultFAQ($conn);
     }
 }
+
+if ($option == 1) {
+    $category = $_GET['category'];
 
 function editProduct($conn)
 {
@@ -289,5 +290,5 @@ function addProduct($conn)
                 </form>
             HTML;
 }
-
+mysqli_close($conn);
 ?>

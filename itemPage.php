@@ -66,10 +66,10 @@ mysqli_close($conn);
                 </div>
                 <div class="addCart">
                     <form action="cart.php" method="POST">
-                        <input type="hidden" name="item_id" value = "<?php echo $id?>">
-                        <input type="hidden" name="item_name" value = "<?php echo $name?>">
-                        <input type="hidden" name="item_price" value = "<?php echo $price?>">
-                        <input type="hidden" name="addcart" value = "">
+                        <input type="hidden" name="item_id" value="<?php echo $id?>">
+                        <input type="hidden" name="item_name" value="<?php echo $name?>">
+                        <input type="hidden" name="item_price" value="<?php echo $price?>">
+                        <input type="hidden" name="addcart" value="">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </div>

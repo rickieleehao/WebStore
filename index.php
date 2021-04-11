@@ -12,6 +12,7 @@
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
     <title>FootWear</title>
 </head>
+
 <body>
     <?php include "./component/header.php"; ?>
     <?php include "./component/navigator.php"; ?>
@@ -21,7 +22,7 @@
             <p id="category-gender"><?php echo $gender_word?></p>
             <p id="category-gender-end"></p>
         </div>
-        <div class = "mainAd_imgWrapper">
+        <div class="mainAd_imgWrapper">
             <img class="mainAd_img">
             <div>
                 <a href="shopping.php?category=All">Shop</a>
