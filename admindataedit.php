@@ -13,8 +13,8 @@ if (isset($_POST['id'])) {
     $P_description = $_POST['p_description'];
 
     echo $_POST['id'];
-    $sql = $conn->prepare("UPDATE shoes_data SET name = ?, category = ?, sub_category = ?, price = ?, year = ?, promotion_rate = ?, color_description = ?, product_description = ? WHERE id = $id");
-    $sql->bind_param("sssdidss", $name, $category, $sub, $price, $year, $p_rate, $C_description, $P_description);
+    $sql = $conn->prepare("UPDATE shoes_data SET name = ?, category = ?, sub_category = ?, price = ?, year = ?, promotion_rate = ?, color_description = ?, product_description = ? WHERE id = ?");
+    $sql->bind_param("sssdidsss", $name, $category, $sub, $price, $year, $p_rate, $C_description, $P_description, $id);
     if ($sql->execute()) {
         echo '<script type="text/javascript"> alert("Updated") </script>';
     } else {
@@ -24,11 +24,12 @@ if (isset($_POST['id'])) {
     mysqli_close($conn);
     header("refresh:0; url=admin.php");
 } else {
-    $Question = $_POST['question'];
-    $Answer = $_POST['answer'];
+    $question = $_POST['question'];
+    $answer = $_POST['answer'];
+    $fid = $_POST['fid'];
 
-    $sql = $conn->prepare("UPDATE faq SET question = ?, answer = ? WHERE fid ='$_POST[fid]'");
-    $sql->bind_param("ss", $Question, $Answer);
+    $sql = $conn->prepare("UPDATE faq SET question = ?, answer = ? WHERE fid = ?");
+    $sql->bind_param("sss", $question, $answer, $fid);
     if ($sql->execute()) {
         echo '<script type="text/javascript"> alert("Updated") </script>';
     } else {

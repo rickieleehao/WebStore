@@ -6,105 +6,56 @@ body {
 .button_grp {
 	width: 200px;
 	padding: 20px;
-	position: absolute;
-	overflow-y: auto;
 	float: left;
-}
-
-.button_grp ul {
-	display: inline-block;
 }
 
 .button_grp ul li {
 	background: rgb(255, 255, 255);
-	float: left;
-	margin: 15px;
-	padding: 10px 15px;
-	min-width: 80px;
+	float: left; 
+	margin: 10px 15px;
+	padding: 10px;
+	min-width: 100px;
 	text-align: center;
 	border-radius: 5px;
 	cursor: pointer;
-	transition: all 0.2s ease;
-	border-radius: 15px;
+	transition: all 0.05s ease;
+	border-radius: 5px;
 	box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.125);
 }
 
-.button_grp ul label {
+.button_grp label {
 	padding: 5px 10px;
-	position: absolute;
-	float: left;
-	top: 0px;
-	left: 0px;
-	font-size: 16px;
-	color: rgb(0, 0, 0);
+	font-size: 18px;
+	font-weight: bold;
+	margin: 5px;
 }
 
 .button_grp ul li.active,
 .button_grp ul li:hover {
 	background-color: #FEF093;
+	color: #000000;
 	box-shadow: 0px 2px 5px #666;
 	transform: translateY(4px);
 }
 
 .button_grp ul.nobullet {
-	list-style-type: none
+	list-style-type: none;
 }
-
-.button_grp ul label {
-	margin: 5px;
-}
-
-h1 {
-	margin-left: 4em;
-}
-
-.formclass {
-	margin-left: 8em;
-}
-
-
-input[type=text],
-select {
-	width: 20%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	margin-right: 5px;
-	display: inline-block;
-	border: 2px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-}
-
-input[type=submit] {
-	width: 20%;
-	background-color: #4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-input[type=submit]:hover {
-	background-color: #45a049;
-}
-
 
 .content {
-	position: absolute;
-	width: 80%;
-	right: 0;
+	margin-left: 200px;
+	padding-bottom: 25px;
+	padding-top: 25px;
 }
 
-.content a {
+.content a{
 	text-decoration: none;
 }
 
-.content li {
-	display: inline;
-	text-decoration: none;
-	color: black;
+.content a span {
+	margin-left: 10px;
+	padding-bottom: 2px;
+	font-size: 24px;
 }
 
 .adminNav {
@@ -126,4 +77,127 @@ input[type=submit]:hover {
 
 .adminNav a:hover{
 	background-color: lightyellow;
+}
+
+.fa-plus-circle {
+	padding-bottom: 20px;
+}
+
+/* admin data */
+
+a, a:visited, a:hover, a:active {
+	color: inherit;
+}
+
+input:read-only {
+	background-color: #E0E0E0;
+	color: #808080;
+}
+
+input[type=text],
+input[type=number],
+select,
+textarea {
+	width: 200px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	margin-right: 5px;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+} 
+
+input[type=text]{
+	overflow-y: scroll;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+input[type=number]{
+	-webkit-appearance: textfield;
+	   -moz-appearance: textfield;
+			appearance: textfield;
+}
+
+input:focus, input:hover, 
+select:focus, select:hover,
+textarea:focus, textarea:hover
+{
+	border: 2px solid #555;
+}
+
+textarea {
+	width: 500px;
+	resize: none;
+}
+
+.big{
+	height: 150px;
+}
+
+.small{
+	height: 75px;
+}
+
+
+.button{
+	background-color: yellow;
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.button:hover{
+	background-color: rgb(0, 0, 0);
+	color:white;
+	transition: all 0.15s;
+}
+
+.button:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+
+.container{
+	padding: 5px;
+}
+
+.container button{
+	width: 500px;
+}
+
+.container .btn{
+	align-content: center;
+}
+
+table {
+	border-collapse: collapse;
+	width: 1100px;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+i{
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.edit {
+	width: 100px;
+}
+
+.delete {
+	width: 100px;
 }

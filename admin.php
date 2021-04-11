@@ -15,21 +15,22 @@
 
 <body>
     <?php include "./component/adminheader.php"; ?>
-    <div class="button_grp">
-        <label>Category</label>
-        <ul class="nobullet">
-            <a href="admin.php?filter=product">
-                <li class="button">Product</li>
-            </a>
-            <a href="admin.php?filter=FAQ">
-                <li class="button">FAQ</li>
-            </a>
-        </ul>
-    </div>
-    <div class="content">
-        <nav>
+
+    <div class="content_flexbox">
+        <div class="button_grp">
+            <label>Category</label>
+            <ul class="nobullet">
+                <a href="admin.php?filter=product">
+                    <li class="button">Product</li>
+                </a>
+                <a href="admin.php?filter=FAQ">
+                    <li class="button">FAQ</li>
+                </a>
+            </ul>
+        </div>
+        <div class="content">
             <?php include "admindata.php"; ?>
-        </nav>
+        </div>
     </div>
 </body>
 

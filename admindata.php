@@ -1,5 +1,4 @@
 <body>
-    <link rel="stylesheet" href="./styles/admindata.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 <?php
@@ -12,43 +11,40 @@ if (!isset($_GET['filter'])) {
     if (isset($_GET['category'])) {
         $category = $_GET['category'];
         if ($category == "product") {
-            $option = 1; //edit page for product
+            editProduct($conn);
         } else if ($category == "FAQ") {
-            $option = 4; //edit page for faq
+            editFAQ($conn);
         } else if ($category == "newFAQ") {
-            $option = 5;
+            addFAQ();
         } else if ($category == "newproduct") {
-            $option = 6;
+            addProduct($conn);
         }
     } else {
-        $option = 2; //default page for product
+        defaultProduct($conn);
     }
 } else if (isset($_GET['filter'])) {
     $filter = $_GET['filter'];
 
     if ($filter == "product") {
-        $option = 2; //default page for product
+        defaultProduct($conn);
     } else if ($filter == "FAQ") {
-        $option = 3; //default page for faq
+        defaultFAQ($conn);
     }
 }
 
-
-
-if ($option == 1) {
-    $category = $_GET['category'];
+function editProduct($conn)
+{
     $id = $_GET['id'];
 
     $query = "SELECT * FROM shoes_data WHERE id = '$id'";
-
 
     if ($result = mysqli_query($conn, $query)) {
         while ($obj = mysqli_fetch_object($result)) {
             echo <<<HTML
                 <form action="admindataedit.php" method="POST">
                     <div class="container">
-                        <label>Product ID: $obj->id </label>
-                        <input type="hidden" value="$obj->id" name="id">
+                        <label>Product ID:</label><br>
+                        <input type="text" name="id" value="$obj->id" readonly>
                     </div>
                     <div class="container">
                         <label>Name</label><br>
@@ -73,7 +69,7 @@ if ($option == 1) {
                     </div>
                     
                     <div class="container">
-                        <label>Price(RM)</label><br>
+                        <label>Price (RM)</label><br>
                         <input type="number" value = "$obj->price" name="price">
                     </div>
                     <div class="container">
@@ -99,59 +95,10 @@ if ($option == 1) {
             HTML;
         }
     }
-} else if ($option == 2) {
-    $query = "SELECT * FROM shoes_data";
-    echo "<a href=admin.php?category=newproduct><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
-    echo <<<HTML
-        <table>
-        <tr>
-            <th>SHOE ID</th>
-            <th>CATEGORY</th>
-            <th>NAME</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
-        </tr>
-        HTML;
-    if ($result = mysqli_query($conn, $query)) {
-        while ($obj = mysqli_fetch_object($result)) {
-            echo <<<HTML
-            <tr>
-                <td>$obj->id</td>
-                <td>$obj->category</td>
-                <td>$obj->name</td>
-                <td><a href=admin.php?category=product&id=$obj->id><i class="fas fa-edit"></i></a></td>
-                <td><a href=admindatadelete.php?category=product&id=$obj->id><i class="fas fa-trash-alt"></i></a></td>
-            </tr>
-            HTML;
-        }
-    }
-    echo "</table>";
-} else if ($option == 3) {
-    $query = "SELECT * FROM faq";
-    echo "<a href=admin.php?category=newFAQ><i class='fas fa-plus-circle' style='font-size: 50px'></i></a>";
-    echo <<<HTML
-        <table>
-        <tr>
-            <th>FAQ ID</th>
-            <th>QUESTION</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
-        </tr>
-        HTML;
-    if ($result = mysqli_query($conn, $query)) {
-        while ($obj = mysqli_fetch_object($result)) {
-            echo <<<HTML
-            <tr>
-                <td>$obj->fid</td>
-                <td>$obj->question</td>
-                <td><a href=admin.php?category=FAQ&fid=$obj->fid><i class="fas fa-edit"></i></a></td>
-                <td><a href=admindatadelete.php?category=FAQ&fid=$obj->fid><i class="fas fa-trash-alt"></i></a></td>
-            <tr>
-            HTML;
-        }
-    }
-    echo "</table>";
-} else if ($option == 4) {
+}
+
+function editFAQ($conn)
+{
     $fid = $_GET['fid'];
 
     $query = "SELECT * FROM faq WHERE fid = '$fid'";
@@ -177,7 +124,68 @@ if ($option == 1) {
             HTML;
         }
     }
-} else if ($option == 5) {
+}
+
+function defaultProduct($conn)
+{
+    $query = "SELECT * FROM shoes_data";
+    echo "<a href=admin.php?category=newproduct><div><i class='fas fa-plus-circle' style='font-size: 30px'></i><span>Add New Entry</span></div></a>";
+    echo <<<HTML
+        <table>
+        <tr>
+            <th>SHOE ID</th>
+            <th>CATEGORY</th>
+            <th>NAME</th>
+            <th class="edit">EDIT</th>
+            <th class="delete">DELETE</th>
+        </tr>
+        HTML;
+    if ($result = mysqli_query($conn, $query)) {
+        while ($obj = mysqli_fetch_object($result)) {
+            echo <<<HTML
+            <tr>
+                <td>$obj->id</td>
+                <td>$obj->category</td>
+                <td>$obj->name</td>
+                <td><a href=admin.php?category=product&id=$obj->id><i class="fas fa-edit"></i></a></td>
+                <td><a href=admindatadelete.php?category=product&id=$obj->id><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+            HTML;
+        }
+    }
+    echo "</table>";
+}
+
+function defaultFAQ($conn)
+{
+    $query = "SELECT * FROM faq";
+    echo "<a href=admin.php?category=newFAQ><div><i class='fas fa-plus-circle' style='font-size:30px'></i><span>Add New Entry</span></div></a>";
+    echo <<<HTML
+        <table>
+        <tr>
+            <th>FAQ ID</th>
+            <th>QUESTION</th>
+            <th class="edit">EDIT</th>
+            <th class="delete">DELETE</th>
+        </tr>
+        HTML;
+    if ($result = mysqli_query($conn, $query)) {
+        while ($obj = mysqli_fetch_object($result)) {
+            echo <<<HTML
+            <tr>
+                <td>$obj->fid</td>
+                <td>$obj->question</td>
+                <td><a href=admin.php?category=FAQ&fid=$obj->fid><i class="fas fa-edit"></i></a></td>
+                <td><a href=admindatadelete.php?category=FAQ&fid=$obj->fid><i class="fas fa-trash-alt"></i></a></td>
+            <tr>
+            HTML;
+        }
+    }
+    echo "</table>";
+}
+
+function addFAQ()
+{
     echo <<<HTML
     <form action='admindatacreate.php' method="POST">
         <input type="hidden" name="fid">
@@ -194,7 +202,12 @@ if ($option == 1) {
         </div>
     </form>
     HTML;
-} else if ($option == 6) {
+}
+
+
+
+function addProduct($conn)
+{
 
     $query = "SELECT id FROM shoes_data";
     $result = $conn->query($query);
@@ -253,7 +266,7 @@ if ($option == 1) {
                     </div>
                     
                     <div class="container">
-                        <label>Price(RM)</label><br>
+                        <label>Price (RM)</label><br>
                         <input type="number" name="price">
                     </div>
                     <div class="container">
