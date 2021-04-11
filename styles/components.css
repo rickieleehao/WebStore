@@ -152,6 +152,11 @@ span {
     pointer-events: none;
 }
 
+.dropDown ul li.sideMenu:hover ul {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .dropDown .sideMenu{
     width: 30px;
     height: 30px;
@@ -170,6 +175,10 @@ span {
     padding-left: 10px;
 }
 
+.sideMenu img{
+    cursor: pointer;
+}
+
 .sideMenu ul {
     overflow: hidden;
 }
@@ -178,11 +187,6 @@ span {
     text-decoration: none;
     color: black;
     width: 100%;
-}
-
-.dropDown ul li.sideMenu:hover ul {
-    opacity: 1;
-    pointer-events: all;
 }
 
 .sideMenu li:hover {

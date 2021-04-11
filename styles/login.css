@@ -1,42 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 
-*{
+* {
     font-family: 'Noto Sans', sans-serif;
 }
-.container{
-	position:relative;
-	margin-bottom:25px;
+
+.container {
+    position: relative;
+    margin-bottom: 25px;
 }
 
-.container label{
-	position:relative;
-	top:0px;
-	left:0px;
-	font-size:16px;
-	color:rgb(0, 0, 0);	
-    pointer-events:none;
-	transition: all 0.05s ease-in-out;
+.container label {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+    transition: all 0.05s ease-in-out;
 }
 
 .container input {
-    border:0;
-    border-bottom:1px solid rgb(0, 0, 0);  
-    width:100%;
-    padding:8px 0 5px 0;
-    font-size:16px;
-    color:rgb(0, 0, 0);
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 60%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
 }
 
-.container input:focus{ 	
-    outline:none;
-    border-style:solid;	
+.container input:focus {
+    outline: none;
+    border-style: solid;
 }
-  
 
-
-button[type = "submit"] {
-	color:rgb(0, 0, 0);
-	background-color:yellow;
+button[type="submit"] {
+    color: rgb(0, 0, 0);
+    background-color: yellow;
     padding: 15px 20px;
     font-size: 12px;
     cursor: pointer;
@@ -44,75 +43,82 @@ button[type = "submit"] {
     text-decoration: none;
     outline: none;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    margin:auto;
-    float:right;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #999;
+    margin: auto;
+    width: 60%;
 }
 
-button[type = "submit"]:hover {
-    background-color: red;
+.login-content button[type="submit"]:hover {
+    background-color: lightyellow
 }
 
-button[type = "submit"]:active {
+button[type="submit"]:active {
     background-color: yellow;
     box-shadow: 1px #666;
     transform: translateY(2px);
-  }
-  
+}
+
 button:hover {
     opacity: 0.8;
 }
 
-
-  
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: yellow;
 }
-  
-  /* Center the image and position the close button */
+
+/* Center the image and position the close button */
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
-  
+
 img.avatar {
     width: 40%;
     border-radius: 50%;
 }
-  
+
 .container {
     padding: 16px;
 }
 
 /* The Login (background) */
 .login {
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
     padding-top: 5px;
-  }
-  
-/* Login Content/Box */
-.login-content {
-    background-color: #ffffff;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 25%; /* Could be more or less, depending on screen size */
 }
 
-.fail{
+/* Login Content/Box */
+.login-content {
+    text-align: center;
+    background-color: #ffffff;
+    margin: auto;
+    border: 1px solid #888;
+    width: 500px;
+}
+
+.fail {
     Font-size: 50px;
     position: fixed;
     top: 50%;
@@ -120,7 +126,7 @@ img.avatar {
     /* bring your own prefixes */
     transform: translate(-60%, -40%);
 }
-  
+
 /* The Close Button */
 .close {
     /* Position it in the top right corner outside of the modal */
@@ -131,31 +137,42 @@ img.avatar {
     font-size: 35px;
     font-weight: bold;
 }
-  
+
 /* Close button on hover */
-.close:hover,.close:focus {
+.close:hover,
+.close:focus {
     color: red;
     cursor: pointer;
 }
-  
+
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
 }
-  
+
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
 }
 
-.container input:focus ~ label,
-.container input:valid ~ label{
-	top:-12px;
-	font-size:12px;
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.container input:focus~label,
+.container input:valid~label {
+    top: -12px;
+    font-size: 12px;
 }

@@ -1,10 +1,5 @@
-<?php
-    include 'logindata.php';
-?>
-<head>
-    <link rel="stylesheet" href="./styles/login.css">
-</head>
-
+<?php include 'logindata.php';?>
+<link rel="stylesheet" href="./styles/login.css">
 <div id="ID" class="login">
     <form class="login-content animate" action="login.php" method="POST">
         <div class="imgcontainer">
@@ -14,14 +9,14 @@
         </div>
 
         <div class="container">
-            <label>Email</label>
-            <input type="email" name="uemail" required>
+            <label>Email</label><br>
+            <input type="email" name="uemail" required><br>
         </div>
         <div class="container">
-            <label>Password</label>
-            <input type="password" name="password" required>
-            <a href="contact.php">Forgot password</a>
-            <button type="submit" class="btn" name="login">Login</button>
+            <label>Password</label><br>
+            <input type="password" name="password" required><br><br>
+            <a href="contact.php">Forgot password</a><br><br>
+            <button type="submit" class="btn" name="login">Login</button><br>
         </div>
     </form>
 </div>

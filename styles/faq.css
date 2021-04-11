@@ -1,10 +1,12 @@
-p{
-    left:300px;
+.faq_main h1{
+    padding: var(--spacing);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.faq{
+.faq {
     font-weight: bold;
-    background-color: yellow;
+    background-color: var(--yellow);
     color: #444;
     cursor: pointer;
     margin: auto;
@@ -12,23 +14,14 @@ p{
     width: 80%;
     text-align: left;
     outline: none;
-    font-size: 15px;
-    transition: 0.4s;
 }
 
-.faq:hover{
-    font-size: 20px;
-}
-  
-.active {
-    background-color: yellow; 
-}
-  
 .panel {
     width: 80%;
-    margin:auto;
+    margin: auto;
     padding: 25px;
     display: none;
     background-color: #f1f1f1;
     overflow: hidden;
+    transition: all 0.3s ease-in;
 }
