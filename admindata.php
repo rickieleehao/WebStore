@@ -136,8 +136,8 @@ function defaultProduct($conn)
             <th>SHOE ID</th>
             <th>CATEGORY</th>
             <th>NAME</th>
-            <th class="edit">EDIT</th>
-            <th class="delete">DELETE</th>
+            <th class="icon-button">EDIT</th>
+            <th class="icon-button">DELETE</th>
         </tr>
         HTML;
     if ($result = mysqli_query($conn, $query)) {
@@ -165,8 +165,8 @@ function defaultFAQ($conn)
         <tr>
             <th>FAQ ID</th>
             <th>QUESTION</th>
-            <th class="edit">EDIT</th>
-            <th class="delete">DELETE</th>
+            <th class="icon-button">EDIT</th>
+            <th class="icon-button">DELETE</th>
         </tr>
         HTML;
     if ($result = mysqli_query($conn, $query)) {

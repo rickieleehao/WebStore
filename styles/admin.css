@@ -194,10 +194,6 @@ i{
 	font-size: 20px;
 }
 
-.edit {
-	width: 100px;
-}
-
-.delete {
+.icon-button {
 	width: 100px;
 }
