@@ -58,27 +58,6 @@ body {
 	font-size: 24px;
 }
 
-.adminNav {
-	height: 35px;
-    width: 100%;
-    position: relative;
-	background-color: var(--yellow);
-	color: black;
-	text-align: right;
-}
-
-.adminNav a{
-	position: absolute;
-	right: 40px;
-	top: 10px;
-	width: 100px;
-	text-align: center;
-}
-
-.adminNav a:hover{
-	background-color: lightyellow;
-}
-
 /* admin data */
 
 a, a:visited, a:hover, a:active {

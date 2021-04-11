@@ -18,7 +18,7 @@ if(isset($_SESSION["gender"])){
             <li class="sideMenu"><img id="navLogo" src="./img/nav_icon.png" alt="navLogo">
                 <ul>
                     <li class="<?php echo $gender?>"><a href="./index.php">Home</a></li>
-                    <li class="<?php echo $gender?>"><a href="shopping.php?category=All">Shop</a></li>
+                    <li class="<?php echo $gender?>"><a href="shopping.php?category=All&sub=">Shop</a></li>
                     <li class="<?php echo $gender?>"><a href="./faq.php">FAQ</a></li>
                     <li class="<?php echo $gender?>"><a href="./aboutus.php">About Us</a></li>
                     <li class="<?php echo $gender?>"><a href="./contact.php">Contact Us</a></li>

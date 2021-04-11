@@ -47,13 +47,14 @@
 
 .shoppingContainer {
 	width: 81%;
-	height: 100%;
+	min-height: 750px;
 	float: right;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	right: 10px;
+	padding-right: 50px;
 }
 
 .card {

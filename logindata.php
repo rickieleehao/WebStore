@@ -24,9 +24,11 @@ function loginUser($conn,$email,$password){
             $_SESSION["email"] = $row["email"];
             $_SESSION["name"] = $row["name"];
             $_SESSION["gender"] = $row["gender"];
+            $_SESSION["loggedin"] = true;
 
             if($row["type"] == "Admin"){
-                header("location: admin.php");
+                echo "<script type='text/javascript'> alert('Welcome back Administrator!')</script>";
+                header("Refresh:0; url=admin.php");
             }else{
                 header("location: index.php");
             }

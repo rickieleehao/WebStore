@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['userid'])){
+if(!isset($_SESSION['loggedin'])){
     echo '<script type="text/javascript"> alert("Required login to view the cart or add product.") </script>';
     header("refresh:0; url=index.php");
 }
@@ -16,7 +16,7 @@ if(isset($_GET['action'])){
     }   
 }
 
-if(isset($_POST['addcart'])&&isset($_SESSION['userid'])){
+if(isset($_POST['addcart'])&&isset($_SESSION['loggedin'])){
     if(isset($_SESSION['cart'])){
         $count = count($_SESSION['cart']);
         $item_array = array (

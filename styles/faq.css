@@ -25,3 +25,7 @@
     overflow: hidden;
     transition: all 0.3s ease-in;
 }
+
+.faqWrapper{
+    min-height: 700px;
+}

@@ -137,11 +137,6 @@ body {
     text-align: left;
 }
 
-/* .carousel .cardDesc .name p {
-    position: absolute;
-    bottom: 0px;
-} */
-
 .carousel .cardDesc .cardPrice {
     flex: 1;
     text-align: right;

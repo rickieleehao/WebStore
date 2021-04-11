@@ -20,7 +20,8 @@
   <div class="faq_main">
     <h1>FAQ</h1>
   </div>
-  <?php
+  <div class="faqWrapper">
+    <?php
       $conn = mysqli_connect('localhost', 'root', '', 'data');
       $sql = mysqli_query($conn, "SELECT question,answer FROM faq");
       $i =1;
@@ -30,6 +31,7 @@
         $i++;
       }
     ?>
+  </div>
   <?php include "./component/footer.php"; ?>
 </body>
 
