@@ -17,7 +17,7 @@ body {
 
 .button_grp ul li {
 	background: rgb(255, 255, 255);
-	float:left;
+	float: left;
 	margin: 15px;
 	padding: 10px 15px;
 	min-width: 80px;
@@ -32,7 +32,7 @@ body {
 .button_grp ul label {
 	padding: 5px 10px;
 	position: absolute;
-	float:left;
+	float: left;
 	top: 0px;
 	left: 0px;
 	font-size: 16px;
@@ -50,8 +50,8 @@ body {
 	list-style-type: none
 }
 
-.button_grp ul label{
-	margin:5px;
+.button_grp ul label {
+	margin: 5px;
 }
 
 h1 {
@@ -97,12 +97,33 @@ input[type=submit]:hover {
 	right: 0;
 }
 
-.content a{
+.content a {
 	text-decoration: none;
 }
 
-.content li{
+.content li {
 	display: inline;
 	text-decoration: none;
 	color: black;
+}
+
+.adminNav {
+	height: 35px;
+    width: 100%;
+    position: relative;
+	background-color: var(--yellow);
+	color: black;
+	text-align: right;
+}
+
+.adminNav a{
+	position: absolute;
+	right: 40px;
+	top: 10px;
+	width: 100px;
+	text-align: center;
+}
+
+.adminNav a:hover{
+	background-color: lightyellow;
 }

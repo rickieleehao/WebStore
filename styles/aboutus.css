@@ -1,11 +1,29 @@
-.aboutus-container {
-    width: 600px;
-    height: 120px;
-    margin: 3em 0 1em 0;
-    max-width: 100%;
+.aboutus{
+    padding: var(--spacing);
+    padding-top: 20px   ;
 }
 
-p {
+.aboutus-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aboutus-container{
+    flex:1;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    min-width: 300px;
+}
+
+.aboutus-container img{
+    width: 230px;
+    height: 150px;
+}
+
+.aboutus-container p {
     display: block;
     margin-top: 0;
     margin-bottom: 3em;

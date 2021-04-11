@@ -18,8 +18,7 @@
 
     <div class="mainAd">
         <div class="mainAd_category">
-            <p id="category-gender">Men</p>
-            <!-- <p>Shoes</p> -->
+            <p id="category-gender"><?php echo $gender_word?></p>
             <p id="category-gender-end"></p>
         </div>
         <div class = "mainAd_imgWrapper">
@@ -40,7 +39,6 @@
         </div>
     </div>
     <?php include "./component/footer.php"; ?>
-    <script src="index.js"></script>
 </body>
 
 </html>

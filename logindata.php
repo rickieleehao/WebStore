@@ -23,7 +23,14 @@ function loginUser($conn,$email,$password){
             // $_SESSION["userid"] = $row["id"];
             $_SESSION["email"] = $row["email"];
             $_SESSION["name"] = $row["name"];
-            header("location: index.php");
+            $_SESSION["gender"] = $row["gender"];
+
+            if($row["type"] == "Admin"){
+                header("location: admin.php");
+            }else{
+                header("location: index.php");
+            }
+            
         }
         else if (!$passVAL){
             echo '<div class="fail">Login failed,please try again</div>';
