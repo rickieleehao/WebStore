@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/admin.css">
-    <link rel="stylesheet" href="./styles/admindata.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
