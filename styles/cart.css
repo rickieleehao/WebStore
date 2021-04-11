@@ -1,4 +1,5 @@
 .totalsummary{
+    min-width: 1200px;
     margin-top: 40px;
     display: flex;
     padding: var(--spacing);
@@ -7,24 +8,33 @@
     justify-content: center;
 }
 
+.totalsummary hr {
+    margin: auto;
+    width: 90%;
+}
+
 .cartWrapper{
-    padding-top: 50px;
     width: 100%;
 }
 
 .summary{
-    width: 100%;
-    padding-top: 50px;
+    max-width: 400px;
+    width: 400px;
     text-align: center;
 }
 
 .summary .summaryWrapper{
+    width: 400px;
     border: 1px solid black;
     padding: 50px 0px 50px 0px;
 }
 
 .summary .summaryWrapper h1{
     margin: 20px 0px 20px 0px;
+}
+
+.summary .summaryWrapper p{
+    font-size: 24px;
 }
 
 .summary .summaryWrapper button{
@@ -44,20 +54,28 @@
 }
 
 .card .left{
-    margin-bottom: 20px;
+    flex-shrink: 1;
+    margin: 20px 0px;
     text-align: center;
-    justify-content: center;
 }
 
 .card .right{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    height: 100px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.card .right .item_name {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 2em;
 }
 
 .card img{
-    margin-left: 20px;
+    margin-left: 30px;
     width: 250px;
     height: 300px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
