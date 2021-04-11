@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/blog.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-
     <link rel="icon" href="./img/web_iconMain.png" type="image/x-icon">
     <title>Blog - Main Page</title>
 </head>

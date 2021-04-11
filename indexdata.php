@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost','root','','data');
+include_once "configdb.php";
 $query = "SELECT * FROM shoes_data ORDER BY RAND() LIMIT 4";
 if ($result = mysqli_query($conn,$query));{
     while($obj = mysqli_fetch_object($result)){

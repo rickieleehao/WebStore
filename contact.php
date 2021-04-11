@@ -36,24 +36,25 @@
             <div class="contactus-container">
                 <img src="./img/Contact Us/Email Icon.png">
                 <p>salesnservices@footwear.com <br>
-                We'll reply within one business day</p>
+                    We'll reply within one business day</p>
             </div>
             <div class="contactus-container">
                 <img src="./img/Contact Us/Smartphone Icon.png">
                 <img src="./img/Contact Us/Whatsapp Icon.png">
                 <p>012-345 6789 <br>
-                24 hours a day, 7 days a week</p>
+                    24 hours a day, 7 days a week</p>
             </div>
             <div class="contactus-container">
                 <img src="./img/Contact Us/Pinpoint Icon.png">
                 <p>Lot 1-23, Jalan Bukit Bintang, 55100,<br>
-                Kuala Lumpur, Wilayah Persekutuan <br>
-                Kuala Lumpur. <br>
-                Operation Hour: 10am - 9pm <br>
-                (Monday - Sunday)</p>
+                    Kuala Lumpur, Wilayah Persekutuan <br>
+                    Kuala Lumpur. <br>
+                    Operation Hour: 10am - 9pm <br>
+                    (Monday - Sunday)</p>
             </div>
         </div>
     </div>
     <?php include "./component/footer.php"; ?>
 </body>
+
 </html>

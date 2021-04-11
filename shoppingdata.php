@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost','root','','data');
+include_once "configdb.php";
 
 $category=$_GET['category'];
 

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'data');
+include_once "configdb.php";
 
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
@@ -38,3 +38,5 @@ if (isset($_POST['id'])) {
     mysqli_close($conn);
     header("refresh:0; url=admin.php?filter=FAQ");
 }
+
+?>
